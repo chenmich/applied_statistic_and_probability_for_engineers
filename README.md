@@ -1,1 +1,2 @@
-# applied_statistic_and_probability_for_engineers
+# 工程师的应用统计与概率教材
+

@@ -1,0 +1,30 @@
+site_name: Applied Statistic and Probability for Engineers
+nav:
+    - 前言: index.md
+    
+    
+
+
+
+theme: 
+    name: material
+                                                                                                            
+markdown_extensions:
+    - footnotes
+    - admonition
+    - pymdownx.highlight:
+        linenums: true
+        linenums_style: pymdownx.inline
+    - pymdownx.inlinehilite
+    - pymdownx.superfences
+    - pymdownx.snippets
+    - pymdownx.arithmatex:
+        generic: true
+    - attr_list
+    - pymdownx.details
+plugins:
+    - search
+       
+extra_javascript:
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
