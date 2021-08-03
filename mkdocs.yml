@@ -22,6 +22,14 @@ markdown_extensions:
         generic: true
     - attr_list
     - pymdownx.details
+    - pymdownx.critic:
+        mode: accept
+    - pymdownx.betterem:
+        smart_enable: all
+    - pymdownx.caret
+    - pymdownx.mark
+    - pymdownx.tilde
+    - pymdownx.smartsymbols
 plugins:
     - search
        
