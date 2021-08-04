@@ -1,6 +1,7 @@
 site_name: Applied Statistic and Probability for Engineers
 nav:
     - 前言: index.md
+    - 第一章 统计思想和技术在工程实践中的关键作用: first.md
     
     
 
@@ -22,17 +23,10 @@ markdown_extensions:
         generic: true
     - attr_list
     - pymdownx.details
-    - pymdownx.critic:
-        mode: accept
-    - pymdownx.betterem:
-        smart_enable: all
-    - pymdownx.caret
-    - pymdownx.mark
-    - pymdownx.tilde
-    - pymdownx.smartsymbols
 plugins:
     - search
-       
+
 extra_javascript:
   - https://polyfill.io/v3/polyfill.min.js?features=es6
-  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+  - js/math_equation_numbering.js
