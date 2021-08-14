@@ -226,3 +226,122 @@ $$
 $$
 \mathit{P}(\mathit{E}_1)\leq\mathit{P}(\mathit{E}_2)
 $$
+
+## 2.3、更多的概率定律
+
+对单独的事件应用基本集合操作可以生成组合事件。事件的联合，比如$\mathit{A}\cup\mathit{B}$，事件的交，比如$\mathit{A}\cap\mathit{B}$以及事件的补，比如$\mathit{A}'$都是我们希望要研究的事件。通常可以通过复合每一个单独的事件的概率可以确定复合事件的概率。有时在确定复合事件概率方面，基本集合操作非常有用。在这一节，我们重点讨论联合事件。
+
+!!!note "联合事件的概率"
+
+    $$
+    \mathit{P}(\mathit{B}\cup\mathit{B})=\mathit{P}(\mathit{A})+\mathit{P}(B)-\mathit{P}(\mathit{A}\cap\mathit{B})
+    $$
+  
+还记得两个事件如果存在$\mathit{A}\cap\mathit{B}=\varnothing$，那么有$\mathit{P}(\mathit{A}\cap\mathit{B})=0$。联合事件的的概率可以简化第(3)概率公理。
+
+!!!note ""
+    如果事件$\mathit{A}$和$\mathit{B}$是互斥事件，则有：
+
+    $$
+    \mathit{P}(\mathit{A}\cup\mathit{B})=\mathit{P}(\mathit{A})+\mathit{P}(\mathit{B})
+    $$
+
+我们用实例来表达如何应用联合事件概论的公式。
+
+!!!note "实例2.3"
+
+    下面的表2.1显示半导体工厂生产过程中940个晶圆的生产历史。假定任一个晶圆被随机地选中。设事件$\mathit{H}$为是晶圆包含高级别污染程度的事件，那么有$\mathit{P}(\mathit{H})＝(112+246)/940$。
+    设$\mathit{C}$是晶圆处于支持工具中心的事件，则$\mathit{C}=624/940$。同时$\mathit{P}(\mathit{H}\cap\mathit{C})$是在支持工具中心且包含高级别污染的晶圆。因此有：
+  
+    $$
+    \mathit{P}(\mathit{H}\cap\mathit{C})=112/940
+    $$
+
+    事件$\mathit{H}\cup\mathit{C}$是处于支持工具中心位置或高级另污染的晶圆，或者两者都是。从表2.1可知，其概率为$\mathit{P}(\mathit{H}\cup\mathit{C})=(628+246)/940$。使用联合事件的概率，也可以计算出$\mathit{P}(\mathit{H}\cup\mathit{C})$：
+
+    $$
+    \begin{align}
+    \mathit{P}(\mathit{H}\cup\mathit{C}) &=\mathit{P}(\mathit{H})+\mathit{P}(\mathit{C}) -\mathit{P}(\mathit{H}\cap\mathit{C}) \nonumber \\    
+    &=358/940+626/940-112/940=872/940\nonumber
+    \end{align}
+    $$
+
+!!!note "表2.1半导体生产过程中晶圆的分类"
+
+  |污染级别|中心|边缘|总数|
+  |--|--|--|--|
+  |低|514|68|582|
+  |高|112|246|358|
+  |总数|626|314||
+
+更复杂的概率，比如三事件概率$\mathit{P}(\mathit{A}\cup\mathit{B}\cup\mathit{C})$也可以重复利用联合事件概率确定，比如：
+
+$$
+\begin{align}
+\mathit{P}(\mathit{A}\cup\mathit{B}\cup\mathit{C}) &=
+\mathit{P}[(\mathit{A}\cup\mathit{B})\cup\mathit{C}] \nonumber \\
+&= \mathit{P}(\mathit{A}\cup\mathit{B})+\mathit{P}(\mathit{C})-\mathit{P}[(\mathit{A}\cup\mathit{B})\cap\mathit{C}] \nonumber \\
+&=\mathit{P}(\mathit{A})+\mathit{P}(\mathit{B})-\mathit{P}(\mathit{A}\cap\mathit{B})+\mathit{P}(\mathit{C})-\mathit{P}[(\mathit{A}\cap\mathit{C})\cup(\mathit{B}\cap\mathit{C})]\nonumber\\
+&=\mathit{P}(A)+\mathit{P}(B)+\mathit{P}(C)-[\mathit{P}(\mathit{A}\cap\mathit{C})+\mathit{P}(\mathit{B}\cap\mathit{C})-\mathit{P}(\mathit{A}\cap\mathit{B}\cap\mathit{C})]\nonumber\\
+&=\mathit{P}(A)+\mathit{P}(B)+\mathit{P}(C)  \nonumber\\
+&\qquad {} +[\mathit{P}(\mathit{A}\cap\mathit{C})+\mathit{P}(\mathit{B}\cap\mathit{C})-\mathit{P}(\mathit{A}\cap\mathit{B}\cap\mathit{C})]\nonumber\\
+&=\mathit{P}(A)+\mathit{P}(B)+\mathit{P}(C) -\mathit{P}(\mathit{A}\cap\mathit{B})-\mathit{P}(\mathit{A}\cap\mathit{C}) \nonumber\\
+&\qquad {} -\mathit{P}(\mathit{B}\cap\mathit{C})+\mathit{P}(\mathit{A}\cap\mathit{B}\mathit{C})\nonumber
+\end{align}
+$$
+
+按照这个推理过程，我们可以确定任意多个事件复合的联合事件的概率。当然事件越多，则公式会越复杂。但三事件的联合概率还是值得我们理解。
+
+!!!note ""
+
+    $$
+      \begin{align}
+        \mathit{P}(\mathit{A}\cup\mathit{B}\cup\mathit{C}) &=\mathit{P}(A)+\mathit{P}(B)+\mathit{P}(C) -\mathit{P}(\mathit{A}\cap\mathit{B}) \nonumber\\
+        &\qquad {} -\mathit{P}(\mathit{A}\cap\mathit{C}) -\mathit{P}(\mathit{B}\cap\mathit{C})+\mathit{P}(\mathit{A}\cap\mathit{B}\mathit{C})\nonumber
+      \end{align}
+    $$
+
+我们仍然用实例解释如何应用三事件联合事件公式确定概率。
+
+!!!note "实例2.4"
+
+    实例2.3中的晶圆更进一步地按照污染程度分类。表2.2显示了晶圆每一个分类的概率。那么即处于边缘或包含四颗污染粒子的晶圆的概率有多大呢？设$\mathit{E}_1$表示晶圆包含4颗或以上的污染颗粒的事件，$\mathit{E}_2$表示处理支持工具边缘的事件。要计算的概率为$\mathit{P}(\mathit{E}_1\cup\mathit{E}_2)$。从表2.2可知，$\mathit{P}(\mathit{E}_1\cap\mathit{E}_2)=0.04$，因此，利用联合事件的概率公式，可得：
+
+    $$
+    \mathit{P}(\mathit{E}_1\cup\mathit{E}_2)＝0.15＋0.28－0.04＝0.39
+    $$
+    再设想，包含的污染颗粒小于两颗或即处于边缘又包含的颗粒多于4颗的概率又是什么呢？高事件$\mathit{E}_1$表示晶圆包含少于两颗污染颗粒的事件，而$\mathit{E}_2$表示晶圆既多于四颗污染颗粒双处于边缘位置的事件。需要求解的概率是$\mathit{P}(\mathit{E}_1\cup\mathit{E}_2)$。现在，从表2.2可知，$\mathit{P}(\mathit{E}_1)＝0.60$且$\mathit{P}(\mathit{E}_2)＝0.03$。同时这两个事件还是互斥事件，因此有$\mathit{P}(\mathit{E}_1\cap\mathit{E}_2)=0$。由此可得：
+
+    $$
+    \mathit{P}(\mathit{E}_1\cup\mathit{E}_2)=0.60+0.03=0.63
+    $$
+
+!!!note "表2.2按污染程度和位置分类的晶圆"
+
+    |包含污染颗粒数|中心|边缘|总数|
+    |------------|---|--|---|
+    |0|0.30|0.10|0.40|
+    |1|0.15|0.05|0.20|
+    |2|0.10|0.05|0.15|
+    |3|0.06|0.04|0.10|
+    |4|0.04|0.01|0.05|
+    |5或以上|0.07|0.03|0.10|
+    |总数|0.72|0.28|1.00|
+
+如果事件是互斥的，则三事件的联合事件的概率可以极大地简化为三个事件概率的和。更一般地，如果事件$\mathit{E}_1,\mathit{E}_2,\cdots,\mathit{E}_k$中每一个事件都的输出结果都没有重叠，则称它们为互斥事件。利用两事件的联合事件概率并做简单推理，我们可以得到下面的结果：
+
+!!!note ""
+    一组事件$\mathit{E}_1,\mathit{E}_2,\cdots,\mathit{E}_k$被称为**互斥事件**，只要所有的事件对都满足：
+    
+    $$
+    \mathit{E}_i\cap\mathit{E}_j=\varnothing
+    $$
+
+    对于一组互斥事件，存在：
+
+    $$
+    \mathit{P}(\mathit{E}_1\cup\mathit{E}_2\cdot\cup\mathit{E}_k)=\mathit{P}(\mathit{E}_1)+\mathit{P}(\mathit{E}_2)+\cdot+\mathit{P}(\mathit{E}_k)
+    $$
+
+
+## 2.4、条件概率
