@@ -234,7 +234,9 @@ $$
 !!!note "联合事件的概率"
 
     $$
+    \begin{equation}
     \mathit{P}(\mathit{B}\cup\mathit{B})=\mathit{P}(\mathit{A})+\mathit{P}(B)-\mathit{P}(\mathit{A}\cap\mathit{B})
+    \end{equation}
     $$
   
 还记得两个事件如果存在$\mathit{A}\cap\mathit{B}=\varnothing$，那么有$\mathit{P}(\mathit{A}\cap\mathit{B})=0$。联合事件的的概率可以简化第(3)概率公理。
@@ -243,7 +245,9 @@ $$
     如果事件$\mathit{A}$和$\mathit{B}$是互斥事件，则有：
 
     $$
+    \begin{equation}
     \mathit{P}(\mathit{A}\cup\mathit{B})=\mathit{P}(\mathit{A})+\mathit{P}(\mathit{B})
+    \end{equation}
     $$
 
 我们用实例来表达如何应用联合事件概论的公式。
@@ -297,7 +301,7 @@ $$
     $$
       \begin{align}
         \mathit{P}(\mathit{A}\cup\mathit{B}\cup\mathit{C}) &=\mathit{P}(A)+\mathit{P}(B)+\mathit{P}(C) -\mathit{P}(\mathit{A}\cap\mathit{B}) \nonumber\\
-        &\qquad {} -\mathit{P}(\mathit{A}\cap\mathit{C}) -\mathit{P}(\mathit{B}\cap\mathit{C})+\mathit{P}(\mathit{A}\cap\mathit{B}\mathit{C})\nonumber
+        &\qquad {} -\mathit{P}(\mathit{A}\cap\mathit{C}) -\mathit{P}(\mathit{B}\cap\mathit{C})+\mathit{P}(\mathit{A}\cap\mathit{B}\mathit{C})
       \end{align}
     $$
 
@@ -310,6 +314,7 @@ $$
     $$
     \mathit{P}(\mathit{E}_1\cup\mathit{E}_2)＝0.15＋0.28－0.04＝0.39
     $$
+
     再设想，包含的污染颗粒小于两颗或即处于边缘又包含的颗粒多于4颗的概率又是什么呢？高事件$\mathit{E}_1$表示晶圆包含少于两颗污染颗粒的事件，而$\mathit{E}_2$表示晶圆既多于四颗污染颗粒双处于边缘位置的事件。需要求解的概率是$\mathit{P}(\mathit{E}_1\cup\mathit{E}_2)$。现在，从表2.2可知，$\mathit{P}(\mathit{E}_1)＝0.60$且$\mathit{P}(\mathit{E}_2)＝0.03$。同时这两个事件还是互斥事件，因此有$\mathit{P}(\mathit{E}_1\cap\mathit{E}_2)=0$。由此可得：
 
     $$
@@ -330,7 +335,7 @@ $$
 
 如果事件是互斥的，则三事件的联合事件的概率可以极大地简化为三个事件概率的和。更一般地，如果事件$\mathit{E}_1,\mathit{E}_2,\cdots,\mathit{E}_k$中每一个事件都的输出结果都没有重叠，则称它们为互斥事件。利用两事件的联合事件概率并做简单推理，我们可以得到下面的结果：
 
-!!!note ""
+!!!note "互斥事件的概率"
     一组事件$\mathit{E}_1,\mathit{E}_2,\cdots,\mathit{E}_k$被称为**互斥事件**，只要所有的事件对都满足：
     
     $$
@@ -340,7 +345,9 @@ $$
     对于一组互斥事件，存在：
 
     $$
+    \begin{equation}
     \mathit{P}(\mathit{E}_1\cup\mathit{E}_2\cdot\cup\mathit{E}_k)=\mathit{P}(\mathit{E}_1)+\mathit{P}(\mathit{E}_2)+\cdot+\mathit{P}(\mathit{E}_k)
+    \end{equation}
     $$
 
 
@@ -387,7 +394,9 @@ $$
     在给定事件$\mathit{A}$发生的条件下事件$\mathit{B}$的概率定义为**条件概率**，用$\mathit{P}(\mathit{B|A})$，条件概率与其它概率的关系为：
 
     $$
+    \begin{equation}
     \mathit{P}(\mathit{B|A})=\mathit{P}(\mathit{A\cap B})/\mathit{P}(\mathit{A})
+    \end{equation}
     $$
 
     其中要求$\mathit{P}(\mathit{A})>0$
@@ -513,4 +522,5 @@ $$
 
 条件概率是很重要的概念。因为工程中，每一个事件的发生，可能都会受到某些因素的影响，但有的因素并不会百分之百发生，因此前提条件是有发生概率的，而我们要研究的事件的发生概率也必定是条件概率。工程中的事故的发生往往就是条件概率。比如在水下混凝土桩的灌注过程中，如果不及时提管减少管口埋深，那么发生堵管的可能性就会增大，因为前提条件变了，堵管这个事故的概率也会变化。在这里概率会增大。这好比汽车驾驶，如果在道路左边行驶，则事故发生的概率也会增大。工程中每一个事故都有它发生的概率，并且前提条件发生变化，事故发生的概率也会发生变化。多个条件都发生，那么事故发生的可能性就会大大地增加。混凝土工程也是这样。如果称量发生故障，砂石的含水量也发生变化，而减水剂的品质也劣化，运输距离还加长，种种原因都向劣化的方向发展，自然混凝土的最终品质劣化的可能性就大为增加了。
 
-##2.5、乘法规则和求总规则
+## 2.5、乘法规则和全概率规则
+
