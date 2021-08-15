@@ -524,3 +524,135 @@ $$
 
 ## 2.5、乘法规则和全概率规则
 
+我们常常会关注两个事件交的概率。把条件概率公式(5)改写后，在概念上就是提供了乘法规则：
+
+!!!note "乘法规则"
+
+    $$
+    \begin{equation}
+    \mathit{P}(\mathit{A\cap B})=\mathit{P}(\mathit{B|A})\mathit{P}(\mathit{A})=\mathit{P}(\mathit{A|B})\mathit{P}(\mathit{B})
+    \end{equation}
+    $$
+
+公式(6)的后一个等式与前一个等式是一致的，含义完全相同。
+
+!!!note "实例2.6"
+
+    数字控制机器分两个阶段制造，两个阶段分别要满足一定的规范要求。在第一阶段满足规范的概率为0.90；在第一阶段满足规范的前提下，第二阶段满足规范的概率为0.95。现在问两个阶段都满足规范的概率是多少。
+
+    这是一个典型的概率乘法问题。设第一阶段满足规范要求的事件为$\mathit{A}$，第二阶段满足规范的事件为$\mathit{B}$。满足两阶段规范的事件就是$\mathit{A\cap B}$。利用公式(6)可以计算：
+
+    $$
+    \mathit{P}(\mathit{A\cap B})=\mathit{P}(\mathit{B|A})\mathit{P}(\mathit{B})=0.95\times 0.9=0.855
+    $$
+
+按照公式(6)交换事件的顺序也是可行的。但在这个实例中没有意义，满足第二阶段规范的概率对第一阶段概率没有影响，从时间序列上，第二阶段事件不可能成为第一阶段的前提条件。
+
+可以这样解释这个实例：两个阶段都满足规范的概率大约为0.85。如果事件需要分两阶段完成，那么两个阶段的概率作用会导致事件发生的概率进一步降低。因此在每一个阶段都要以大的概率满足规范，才可能最终以大的概率满足规范。
+
+在工程上同样如此，一项混凝土工程，涉及到材料管理、配合比设计、生产配制、运输、现场施工以及养护等等多个环节，每一个环节环环相扣，最终混凝土质量要满足规范要求则必须每一个环节都以大概率满足规范要求，否则最终满足要求的概率会很低。这是成功的方面。发生事故的可能性也是如此。有一种通俗的说法，每1000件微小不合安全规范会导致一项小的事故，每1000件小事故会导致中等事故，每1000件中等事故会导致一次大事故。要发生事故的概率也是这种乘法规则，只有每一个环节都高概率地安全，才可能做到最终安全的高概率。
+
+有时有几个条件同时限制一个事件，而需要求解该事件发生的概率。比如在半导体的生产中，当芯片受到高污染时失效的概率为0.10，而在受到不高的污染时失效的概率是0.005。芯片被高污染的概率为0.20，不高污染的概率为0.8，问在生产过程中芯片失效的概率是多少。
+
+很明显，芯片失效的概率取决于它是否暴露在高污染的条件下。对于事件$\mathit{B}$，我们可以写成两个交事件的联合：
+
+$$
+\mathit{B}=(\mathit{A\cap B})\cup(\mathit{A'\cap B})
+$$
+
+<figure>
+  <img src="/images/fig2.6.png" opacity=0.6/>
+  <figcaption>图2.6分割一个事件为两个互斥事件的子集</figcaption>
+</figure>
+
+该事件的全貌可见图2.6。事件$\mathit{A\cap B}$事件$\mathit{A'\cap B}$是互斥的事件。由互斥事件公式(2)和乘法公式(6)可得以下**全概规则**的公式(7)。
+
+!!!note "全概公式"
+
+        对于任意事件$\mathit{A}$和事件$\mathit{B}$，
+
+        $$
+        \begin{equation}
+        \mathit{P}(\mathit{B})=\mathit{P}(\mathit{B\cap A})+\mathit{P}(\mathit{B\cap A'})=\mathit{P}(\mathit{B|A})\mathit{P}(\mathit{A})+\mathit{P}(\mathit{B|A'})\mathit{P}(\mathit{A’})
+        \end{equation}
+        $$
+
+我们用一个实例解释全概公式。
+
+!!!note "实例2.7"
+
+    前述半导体生产过程，在生产过程中污染级别对产品失效的影响概率如表2.4。设产品失效的事件为$\mathit{F}$，产品暴露在高级别污染的事件为$\mathit{H}$。我们要求概率$\mathit{P}(\mathit{F})$，并且有以下信息：
+
+    $$
+    \begin{align}
+    &\mathit{P}(\mathit{F|H})=0.10 &\qquad {} &\mathit{P}(\mathit{F|H'})=0.005 \nonumber\\
+    &\mathit{P}(\mathit{H})=0.20 &\qquad {}&\mathit{P}(\mathit{H'})=0.80\nonumber
+    \end{align}
+    $$
+
+    从公式(7)可以得到：
+
+    $$
+    \mathit{P}(\mathit{F})=0.10(0.20)+0.005(0.80)=0.024
+    $$
+
+    这可以解释为失效概率为一个加权平均值。
+
+!!!note "表2.4污染程度对半导体芯片失效的影响概率"
+
+    |失效概率|污染级别|染污级别的概率|
+    |--|--|--|
+    |0.10|高|0.20|
+    |0.005|不高|0.8|
+
+对于公式(7)可以推广到更为普通的情况。因为$\mathit{A\cup A'}=\mathit{S}$，我们知道$(\mathit{A\cap B})\cup(\mathit{A'\cap B})$等于事件$\mathit{B}$，并且因为$\mathit{A\cap A'}=\varnothing$，所以我们知道事件$\mathit{A\cap B}$和$\mathit{A'\cap B}$是互斥事件。更一般地，有一组事件$\mathit{E_1,E_2,\cdots,E_k}$，如果$\mathit{E_1}\cup\mathit{E_2}\cup\cdots\cup\mathit{E_k}=\mathit{S}$，则说这一组事件是**穷竭**(exhaustive)事件。图2.7显示了由一组互斥穷竭事件分割事件$\mathit{B}$的示意图。
+
+<figure>
+  <img src="/images/fig2.7.png" opacity=0.6/>
+  <figcaption>图2.7分割一个事件为几个个互斥事件的子集</figcaption>
+</figure>
+
+!!!note "全概规则(多个事件)"
+
+    假定$\mathit{E_1}\cup\mathit{E_2}\cup\cdots\cup\mathit{E_k}=\mathit{S}$是互斥和穷竭的事件集，那么有：
+
+    $$
+    \begin{align}
+    \mathit{P}(\mathit{B})&=\mathit{P}(\mathit{B\cap E_1})+\cdots+\mathit{P}(\mathit{B\cap E_k}) \nonumber \\
+    &=\mathit{P}(\mathit{B|E_1})\mathit{P}(\mathit{E_1})+\mathit{P}(\mathit{B|E_2})\mathit{P}(\mathit{E_2})+\cdots+\mathit{P}(\mathit{B|E_k})\mathit{P}(\mathit{E_k})
+    \end{align}
+    $$
+
+我们仍然考虑前面半导体芯片失效的问题。这一次污染的级别分为三级。
+
+!!!note "实例2.8"
+
+    继续前面实例2.7所示的半导体芯片的制造问题。下表是假在生产过程中暴露在不同污染级别下芯片失效的概率。
+
+    |失效概率|污染级别|
+    |---|---|
+    |0.10|高|
+    |0.01|中|
+    |0.001|低|
+    
+    在某一特定的生产过程中，有20％的芯片暴露在高级别污染下，有30％暴露在中级别污染下，而有50％的芯片暴露在低级别污染下。请问这个生产过程中芯片的失效概率是多大？
+    这是一求全概率的问题，可以利用公式(8)来解决问题。设：
+
+    - 事件$\mathit{H}$是芯片暴露在高级别污染下的事件；
+    - 事件$\mathit{M}$是芯片暴露在高级别污染下的事件；
+    - 事件$\mathit{L}$是芯片暴露在高级别污染下的事件；
+
+    那么芯片失效的概率为：
+
+    $$
+    \mathit{P}(\mathit{F})=\mathit{P}(\mathit{F|H})\mathit{P}(\mathit{H})+\mathit{P}(\mathit{F|M})\mathit{P}＋\mathit{P}(\mathit{F|L})\mathit{P}＝0.10(0.20)+0.01(0.30)+0.001(0.50)=0.0235
+    $$
+
+上述计算过程也可以使用图2.8所示的树图来完成。它能同时计算失效的概率和非失效的概率。
+
+<figure>
+  <img src="/images/fig2.8.png" opacity=0.6/>
+  <figcaption>图2.8实例2.8的计算树</figcaption>
+</figure>
+
+## 2.6、事件的独立性
