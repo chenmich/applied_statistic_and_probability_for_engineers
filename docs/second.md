@@ -656,3 +656,64 @@ $$
 </figure>
 
 ## 2.6、事件的独立性
+
+在某些情况下，条件概率$\mathit{P}(\mathit{B|A})$可能等于$\mathit{P}(\mathit{B})$的，在这种情况下，随机实验的中事件$\mathit{A}$的输出结果并不会影响到事件$\mathit{B}$的结果。
+
+!!!note "实例2.9"
+    假定工厂的一批产品共计850个，其中有50个不满足要求。再假定要从这批产品中抽出两件，但抽出第一件检测后，要放回产品批中，再抽第二件产品。在给定第一件产品是次品(事件$\mathit{A}$)的前提下，请问第二件抽到次品(事件$\mathit{B}$)的概率是多少？
+    这个概率要表达为$\mathit{P}(\mathit{B|A})$。因为在选择第二件产品之后要放回产品批中，所以在抽第二件产品时，该产品批仍然有850件产品，其中有50件是次品。因此事件$\mathit{B}$的概率并不与第一次抽中什么有关，仍然是：
+
+    $$
+    \mathit{P}(\mathit{B|A})=50/850
+    $$
+
+    另外两次抽样都是次器的概率为：
+
+    $$
+    \begin{align}
+    \mathit{P}(\mathit{A\cap B})=\mathit{P}(\mathit{B|A})\mathit{P}(\mathit{A})=\left(\frac{50}{850}\right)\cdot\left(\frac{50}{850}\right)=0.0035\nonumber
+    \end{align}
+    $$
+
+仔细分析，这个实例可以推广到更为普通的情形，我们可以得出重要的结论：
+
+!!!note "独立性(两个事件)"
+
+    两个事件是 **独立的**，只要下面任何一个等效陈述为真：
+
+    $$
+    \begin{align}
+    &(1)\mathit{P}(\mathit{A|B})=\mathit{P}(\mathit{A})&\qquad {}&\qquad {}&\qquad {}&\qquad {}&\qquad {}&\qquad {}&\qquad {}\nonumber \\
+    &(2)\mathit{P}(\mathit{B|A})=\mathit{P}(\mathit{B})&\qquad \nonumber\\
+    &(3)\mathit{P}(\mathit{A\cap B})=\mathit{P}(\mathit{A})\mathit{P}(\mathit{B})
+    \end{align}
+    $$
+
+同样地，当考虑多个事件时，我们仍然能将事件独立的概率推广到更为普通的情形。
+
+!!!note "独立事件(多个事件相互独立)"
+
+    事件$\mathit{E_1,E_2,\cdots,E_k}$是相互独立的，当且仅当针对这些事件的任意子集$\mathit{E_{i_1}, E_{i_2},\cdots,E_{i_k}}$，下述陈述为真：
+
+    $$
+    \begin{align}
+    \mathit{P}(\mathit{E_{i_1}\cap E_{i_2}\cap\cdots\cap E_{i_k}})=\mathit{P}(\mathit{E_{i_1}})\times\mathit{P}(\mathit{E_{i_2}})\times\cdots\times\mathit{P}(\mathit{E_{i_k}}) &\qquad {}  &\qquad {}
+    \end{align}
+    $$
+
+我们仍然用一个实例来解释如何应用这个多事件独立的概念。
+
+!!!note "实例2.10"
+
+    假定晶圆含大颗粒杂质的概率为0.01，并且每一个晶圆含大颗粒杂质事件是相互独立的，也就是说，某一晶圆包含大颗粒的概率在本质上与其它晶圆无关。如果分析15处晶圆，没有发现大颗粒杂质的概率是多少呢？
+
+    设$\mathit{E_i}$是第$i$个晶圆不包含大颗粒杂质的事件，$i=1,2,\cdots,15$。那么$\mathit{P}(\mathit{E_i})=0.99$。要求的概率可以表达为$\mathit{P}(\mathit{E_1\cap E_2\cap\cdots\cap E_{15}})$。由独立事件的概率公式(10)我们有：
+
+    $$
+    \begin{align}
+    \mathit{P}(\mathit{E_1\cap E_2\cap\cdots\cap E_{15}})&=\mathit{P}(\mathit{E_1})\times\mathit{P}(\mathit{E_2})\times\cdots \nonumber\\
+    &\qquad {} \times\mathit{P}(\mathit{E_{15}})=0.99^{15}=0.86 \nonumber
+    \end{align}
+    $$
+
+## 2.7、Bayes理论
