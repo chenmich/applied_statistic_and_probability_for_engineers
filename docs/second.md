@@ -824,3 +824,47 @@ $$
 
     **离散**随机变量实例：表面划痕数、1000个测量零件的缺陷比例和错误传输bit数。
 
+!!!note "重要概念"
+
+    - 随机实验(Random experiment)
+
+    - 输出结果(Outcome)
+    
+    - 样本空间(Sample space)
+
+        - 连续样本空间(Continuous sample space)
+
+        - 离散样本空间(Discrete sample space)
+
+    - 随机事件(Random event)
+
+    - 概率(Probability)
+
+    - 概率公理(Axioms of probability)
+
+    - 等似然性输出结果(Equally likely outcomes)
+
+    - 加法规则(Addition rule)
+    
+    - 乘法规则(Multiplication rule)
+
+    - 条件概率(Conditional probability)
+
+    - 独立性(Independence)
+
+    - 互斥事件(Mutually exclusive envnts)
+
+    - 全概规则(Total probabilty rule)
+
+    - Bayes理论(Bayes' theorem)
+
+    - 随机变量(Random variables)
+        - 连续随机变量(Continuous random variables)
+
+        - 离散随机变量(Discrete random variables)
+    
+    - 树图(Tree diagram)
+
+    - Venn图(Venn diagram)
+
+    - 有取代和无取代抽样(With or without replacement)
