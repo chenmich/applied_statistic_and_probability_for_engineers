@@ -1,0 +1,345 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.2">
+    
+    
+      
+        <title>Applied Statistic and Probability for Engineers</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.1118c9be.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ba0d045b.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    <script>function __prefix(e){return new URL(".",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#0" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="Applied Statistic and Probability for Engineers" class="md-header__button md-logo" aria-label="Applied Statistic and Probability for Engineers" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Applied Statistic and Probability for Engineers
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              前言
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="Applied Statistic and Probability for Engineers" class="md-nav__button md-logo" aria-label="Applied Statistic and Probability for Engineers" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Applied Statistic and Probability for Engineers
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="index.html" class="md-nav__link md-nav__link--active">
+        前言
+      </a>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="first.html" class="md-nav__link">
+        第一章 统计思想和技术在工程实践中的关键作用
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="second.html" class="md-nav__link">
+        第二章 概率
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="0">0、前言</h1>
+<p>一直以来，我希望有一套简单明了的小文章向工程师介绍统计和概率的基本思想和在工程中的应用。找了很多教材和讲义，不是过于简单就是过于大部头。读起来总让人有一种无所适从的感觉。如果把它们介绍给一线的工程师，也很难给他们提供实质性的帮助。为此我才决定写这个博客系列的文章，希望在挂一漏万的情况下，给一线工程师指出一窥堂奥的入口，也算是抛砖引玉了。</p>
+<p>自然世界很大，人的认识相对来讲肯定是有限的。要想用有限的知识去预测无限大的自然世界，必定存在某种不足。这种不足就会表现成我们的预测值会在一定范围内有不可捉摸的变化。比如，我们抛一枚硬币，其结果不会总是正面向上，也不会总是向下。在不断抛掷多次时，总会有向上的，也会有向下的。针对某一次抛掷，我们不能准确预测它应该向上或向下。这是因为我们未能完全认识到影响正面向上的因素。要想完全了解这些因素，还需要人们不断努力。但在当前的情况下，我们只能承认现实结果。但可以依据概率和统计的知识，了解这种不确定性的范围，从而在工程上承认这种不确定性的前提下，控制工程质量。</p>
+<p>对预测的不确定还来自另外一个方面。我们认识世界并利用世界的规律完成工程任务时，往往会用一定的模型去表达我们对世界的理解。有时为了简化的目的，我们将某些影响小的因素从模型中剔除出去，使得模型的使用更为便捷。在模型中的这些被忽略的、影响小的因素会影响预测结果，这种影响也会表现为一种随机不可捉摸的性质。我们也可以用概率知识和统计技术来处理。</p>
+<p>比如，我们希望模拟台球游戏。针对低速的台球运动，当然可以用相对论去预测。但相对论的计算相对于牛顿力学，其计算要复杂得多。我们并不需要那么高的预测精度，所以我们仍然依据牛顿力学建立模型。被忽略的相对论因素对预测也会产生某种不确定的影响，我们可以将它归并到随机误差中去处理和控制。</p>
+<p>所以，概率和统计是我们预测世界、控制误差变动的基础知识和重要技术，在工程应用中可以为我们提供解决问题的种种手段和方法，是工程人不可缺少的知识和技能之一。</p>
+<p>为什么土木工程师要学习和掌握一定的统计与概率的基本知识呢？我们先看几个例子。</p>
+<ol>
+<li>
+<p>例如，在交通领域工作的土木工程师关注区域公路系统的容量。一个典型的问题是涉及非工作、家庭出行次数、每个家庭的人数和每个家庭的车辆数量的数据，目标是生成出行生成模型，将出行次数与每个家庭的人数以及每户家庭的车辆数量相关联。 一种称为回归的统计技术分析可以用来构建这个模型。出行生成模型是很重要交通系统规划工具。回归方法是工程中最广泛使用的统计技术。它是统计技术之一。</p>
+</li>
+<li>
+<p>如果混凝土强度是一个随机变量，那么它的分布又是什么，如何理解混凝土强度标准值。从概率分布如何依据生产值设定混凝土的配制强度，这需要有随机变量及其概率的基础知识。这是在事前需要利用这些知识和技术。</p>
+</li>
+<li>
+<p>对于已生产完成的混凝土，要判断它的强度是否达到规定的标准值，是否达到验收要求，就需要对已生产的混凝土强度值进行判断。判断的方法有参数的点估计、参数区间估计和参数假设检验等统计技术。其中的深刻数理统计含义需要有概率和数量统计的基础知识才能充分理解，并在生产过程中运用。这是事后中需要利用这些知识和技术。</p>
+</li>
+</ol>
+<p>我们在编写这套教材时，还对两个问题做了深入的思考。一个是概率和统计不是数学，但它的内容往往与数学知识紧密相连，因此在介绍时会出现大量的数学公式。这往往会令人望而却步。我们认为，作为工程师，理解概率与统计的核心思想比那些结论的推导更为重要。因此，我们希望努力做到少用数学公式，在不损害对结论理解的前提下尽可能少地介绍数学推导过程。第二个问题是，概率与数量统计的内容庞大，为了让本书先有一个雏形，便于众多工程师阅读，快速建立概率与统计的思维方式，所以每一个主题我们都会先介绍最为核心的概念。至于在此雏形的基础上，还需要补充什么内容，我们会广泛地征求工程师的建议，逐步被完善。</p>
+<p>我们在撰写这套教材时，主要参考了以下书籍：</p>
+<p>Douglas C. Montgomery, George C. Runger. <em>Applied Statistics and Probabilty for Engineers.</em>  Fifth Edition. John Wiley &amp; Sons, Inc. 2011.  </p>
+<p>如果没有专门指明，在这套教材中的图和表以及实例都来自上述参考书籍。</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+      
+        
+        <a href="first.html" class="md-footer__link md-footer__link--next" aria-label="Next: 第一章 统计思想和技术在工程实践中的关键作用" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              第一章 统计思想和技术在工程实践中的关键作用
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": ".", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "assets/javascripts/workers/search.709b4209.min.js", "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.2b46852b.min.js"></script>
+      
+        <script src="javascripts/mathjax_config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
