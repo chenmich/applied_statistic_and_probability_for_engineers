@@ -1,0 +1,1061 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.2">
+    
+    
+      
+        <title>第三章 离散随机变量及其概率分布 - Applied Statistic and Probability for Engineers</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.1118c9be.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ba0d045b.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    <script>function __prefix(e){return new URL(".",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#3" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="Applied Statistic and Probability for Engineers" class="md-header__button md-logo" aria-label="Applied Statistic and Probability for Engineers" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Applied Statistic and Probability for Engineers
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              第三章 离散随机变量及其概率分布
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="Applied Statistic and Probability for Engineers" class="md-nav__button md-logo" aria-label="Applied Statistic and Probability for Engineers" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Applied Statistic and Probability for Engineers
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        前言
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="first.html" class="md-nav__link">
+        第一章 统计思想和技术在工程实践中的关键作用
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="second.html" class="md-nav__link">
+        第二章 概率
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          第三章 离散随机变量及其概率分布
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="third.html" class="md-nav__link md-nav__link--active">
+        第三章 离散随机变量及其概率分布
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    3.1、离散随机变量
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    3.2、概率分布和概率质量函数
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    3.3、累积分布函数
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#34" class="md-nav__link">
+    3.4、离散随机变量的平均值和方差
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#35" class="md-nav__link">
+    3.5、几个重要的离散随机变量分布
+  </a>
+  
+    <nav class="md-nav" aria-label="3.5、几个重要的离散随机变量分布">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#351" class="md-nav__link">
+    3.5.1、离散均匀分布
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#352" class="md-nav__link">
+    3.5.2、二项式分布
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#353" class="md-nav__link">
+    3.5.3、几何分布和负二项式分布
+  </a>
+  
+    <nav class="md-nav" aria-label="3.5.3、几何分布和负二项式分布">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3531" class="md-nav__link">
+    3.5.3.1、几何分布
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3532" class="md-nav__link">
+    3.5.3.2、负二项式分布
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#354" class="md-nav__link">
+    3.5.4、泊松分布
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="fourth.html" class="md-nav__link">
+        第四章 连续随机变量及其概率分布
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    3.1、离散随机变量
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    3.2、概率分布和概率质量函数
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    3.3、累积分布函数
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#34" class="md-nav__link">
+    3.4、离散随机变量的平均值和方差
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#35" class="md-nav__link">
+    3.5、几个重要的离散随机变量分布
+  </a>
+  
+    <nav class="md-nav" aria-label="3.5、几个重要的离散随机变量分布">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#351" class="md-nav__link">
+    3.5.1、离散均匀分布
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#352" class="md-nav__link">
+    3.5.2、二项式分布
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#353" class="md-nav__link">
+    3.5.3、几何分布和负二项式分布
+  </a>
+  
+    <nav class="md-nav" aria-label="3.5.3、几何分布和负二项式分布">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3531" class="md-nav__link">
+    3.5.3.1、几何分布
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3532" class="md-nav__link">
+    3.5.3.2、负二项式分布
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#354" class="md-nav__link">
+    3.5.4、泊松分布
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="3">3、离散随机变量及其概率分布</h1>
+<p>在<a href="second.html">第2章</a>我们介绍了概率的基础知识，最后一节(2.8)特别介绍了随机变量。随机变量是一个函数，它为随机实验的样本空间分配一个具体的数字。</p>
+<p>在医院急诊科，前来急诊的病人有时会多，有时会少，是随机变动的。因此我们可以用随机变量来表示某一个时刻急诊科就诊总人数。通过观察，可以分析就诊病人在每一天的分布情况，由此可以分析急诊科的资源配置是否满足要求，在现有配置下不满足要求的风险有多大。这是本章主要的研究内容。</p>
+<div class="admonition note">
+<p class="admonition-title">学习目标</p>
+<p>经过仔细学习本章后，可以做到：</p>
+<ol>
+<li>从概率质量函数确定概率，或相反从概率确定概率质量函数</li>
+<li>从累积分布函数确定概率，从概率质量函数确定累积概率分布函数，或相反。</li>
+<li>计算离散随机变量的平均值和方差。</li>
+<li>理解某些常用离散概率分布的假设。</li>
+<li>选择适当的离散概率分布，计算特定应用的概率。</li>
+<li>为某些常用的离散概率分布计算概率、确定平均值和方差</li>
+</ol>
+</div>
+<h2 id="31">3.1、离散随机变量</h2>
+<p>许多系统，比如[第2章]的蒸馏实例，再比半导体生产，甚至于水泥生产、混凝土生产及浇筑等等系统，都可以用相同或相似的随机实验来模拟建模，它们都有相同的抽象模型。人们可以分析这些常见模型的随机变量分布，它们的结果又能用于其它领域的工程实例中。这是人类认识世界的模式，即举一返三的模式。在本章我们要分析少量几个常用常见的随机实验和<strong>离散随机</strong>变量。由于在随机实验这个抽象模型的基础上讨论，所以我们常常可以忽略具体系统底层的样本空间而直接描述特定随机变量的分布。</p>
+<div class="admonition note">
+<p class="admonition-title">实例3.1</p>
+<p>商业用语音通讯系统常常包含48条外线。在某一特定时刻，观察系统会发现某些线路正在被使用。设随机变量<span class="arithmatex">\(X\)</span>表示正在使用的线路数量。那么<span class="arithmatex">\(X\)</span>可以是<span class="arithmatex">\(\{0,1,\cdots,48\}\)</span>之间的任何整数。当观察到系统正有10条线路在使用时，则<span class="arithmatex">\(x=10\)</span>。</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">实例3.2</p>
+<p>混凝土生产强度等级C30的普通混凝土。针对连续生产的180方混凝土，我们取两次样检测其强度。检测结果有<em>合格</em>(pass)和<em>不合格</em>(fail)两个结果。假定混凝土强度合格的概率为0.95，并且两次抽样是随机独立的。如表3.1显示了随机实验的样本空间和相关的概率。比如，因为独立性，则第一组试件合格第二级试件不合格的概率的随机变量<span class="arithmatex">\(X\)</span>取值为<span class="arithmatex">\(pf\)</span>，它的概率为:</p>
+<div class="arithmatex">\[
+P(pf)=0.95(0.05)=0.0475
+\]</div>
+<p>在这个实例中，随机变量<span class="arithmatex">\(X\)</span>被定义为合格试件组数。</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">表3.1、混凝土检测</p>
+<table>
+<thead>
+<tr>
+<th>试件组1</th>
+<th>试件组2</th>
+<th>概率</th>
+<th><span class="arithmatex">\(x\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pass</td>
+<td>pass</td>
+<td>0.9025</td>
+<td>2</td>
+</tr>
+<tr>
+<td>fail</td>
+<td>pass</td>
+<td>0.0475</td>
+<td>1</td>
+</tr>
+<tr>
+<td>pass</td>
+<td>fail</td>
+<td>0.0475</td>
+<td>1</td>
+</tr>
+<tr>
+<td>fail</td>
+<td>fail</td>
+<td>0.0025</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>由实例3.2可知，针对连续生产的混凝土抽取两组试件，只要生产稳定可控，两组试件都不合格的概率是微乎其微的，即使有一组不合格的概率也只有9.5％，应该很少发生。如果生产过程中发生了，表明这是一个强烈的信号，告诉我们生产过程中可能有应该控制的因素未控制好，需要去查找原因解决问题。</p>
+<h2 id="32">3.2、概率分布和概率质量函数</h2>
+<p>随机变量是对随机实验结果的映射函数，可以用来描述非常多系统的随机过程。要用好它，则凸现了其性质的重要性。因此我们在讨论时往往会更关注它的概率分布而忽略它的底层原因。比如在3.1节中的两个实例中，我们常常关注随机变量的在<span class="arithmatex">\(\{0,1,\cdots,48\}\)</span>中的取值。同样地，在实例3.2中，我们也常常关心随机变量在<span class="arithmatex">\(\{0,1,2\}\)</span>上的取值。</p>
+<p>随机变量<span class="arithmatex">\(X\)</span>的<strong>概率分布</strong>描述该变量某一特定值的概率。对于本章研究的离散随机变量，分布常常由一个列表组成。该列表列出了每一个随机变量取值所对应的概率。在某些情况下，用一个公式表达这些概率也是很方便的。</p>
+<div class="admonition note">
+<p class="admonition-title">实例3.3</p>
+<p>在通过数字转换的过程中有可能会接收到错误的数字位。设<span class="arithmatex">\(X\)</span>等于接下来四个数字位接收到错误位数，可能的值就是<span class="arithmatex">\(\{0,1,2,3,4\}\)</span>。下面的数据给出了依据模型所得到概率。假定如下：</p>
+<div class="arithmatex">\[
+\begin{align}
+P(X=0)&amp;=0.6561 &amp;\qquad P(X=1)=0.2916 \nonumber\\
+P(X=2)&amp;=0.0486 &amp;\qquad P(X=3)=0.0036 \nonumber\\
+P(X=4)&amp;=0.0001 \nonumber
+\end{align}
+\]</div>
+<p><span class="arithmatex">\(X\)</span>的概率分布就是它的每一个取值与对应的概率之间的关系。我们可以用图形来表达这种关系。事实上概率分布就是一种函数，即由随机变量取值与它随机实验时获得该值的概率。图3.1表达了这种关系。</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">图3.1、错误转换数字数的概率分布</p>
+<p><img alt="fig.3.1" src="images/fig3.1.png" /></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">概率质量函数</p>
+<p>离散变量<span class="arithmatex">\(X\)</span>它的可能取值为<span class="arithmatex">\(\{x_1,x_2,\cdots,x_n\}\)</span>的<strong>概率质量函数</strong>(probability mass function)就是函数：</p>
+<div class="arithmatex">\[
+\begin{align}
+&amp;\text{(1)}\space f(x_i)\geq 0 \nonumber \\
+&amp;\text{(2)}\space \sum_{i=1}^{n}f(x_i)=1 \nonumber \\
+&amp;\text{(3)}\space f(x_i)=P(X=x_i) \qquad \qquad
+\end{align}
+\]</div>
+</div>
+<p>根据概率质量函数的定义，实例3的各个函数值为<span class="arithmatex">\(f(0)=0.6561\)</span>、<span class="arithmatex">\(f(1)=0.2916\)</span>、<span class="arithmatex">\(f(2)=0.0486\)</span>、<span class="arithmatex">\(f(3)=0.0036\)</span>以及<span class="arithmatex">\(f(4)=0.0001\)</span>。全部相加的各为1。</p>
+<h2 id="33">3.3、累积分布函数</h2>
+<div class="admonition note">
+<p class="admonition-title">实例3.4</p>
+<p>在实例3.3中，我们可能会更关心随机变量取前三个错误位或更少的概率。因此问题可以描述为<span class="arithmatex">\(P(X\leq 3)\)</span>。
+事件<span class="arithmatex">\(X\leq 3\)</span>是三个事件<span class="arithmatex">\(\{X=0\}\)</span>、<span class="arithmatex">\(\{X=1\}\)</span>联合事件、<span class="arithmatex">\(\{X=2\}\)</span>和<span class="arithmatex">\(\{X=3\}\)</span>的联合事件。因为这几个事件都是互斥事件，所以有:</p>
+<div class="arithmatex">\[
+\begin{align}
+P(X\leq 3) &amp;= P(X=0)+P(X=1)+P(X=2)+P(X=3)\nonumber \\
+&amp;=0.6561+0.2916+0.00486+0.0036=0.9999 \nonumber
+\end{align}    
+\]</div>
+<p>利用这个方法，还可以确定概率分布。即：
+$$
+P(X=3)=P(X\leq 3)-P(X\leq 2)=0.0036</p>
+</div>
+<p>从实例3.4我们知道，提供诸如<span class="arithmatex">\(P(X\leq 3)\)</span>这样的<strong>累积概率</strong>用于分析和研究是非常有帮助的，使用累积概率还能方便地确定概率质量函数。因此 ，累积概率代替概率质量函数用于描述随机变量也是非常好的方法。</p>
+<p>一般地，对于任意可能取值为<span class="arithmatex">\(\{x_1,x_2,\cdots,x_n\}\)</span>的离散随机变量，事件<span class="arithmatex">\(\{X=1\},\{X=2\},\cdots,\{X=n\}\)</span>是互斥事件，因此有<span class="arithmatex">\(P(X\leq x)=\sum_{x_i\leq x}f(x_i)\)</span>。</p>
+<div class="admonition note">
+<p class="admonition-title">累积分布函数</p>
+<p>用<span class="arithmatex">\(F(x)表示离散随机变量\)</span>X$的<strong>累积分布函数</strong>(cumulative distribution function)，它应该是：</p>
+<div class="arithmatex">\[
+F(x)=P(X\leq x)=\sum\nolimits_{xi\leq x}f(x_i)
+\]</div>
+<p>离散随机变量<span class="arithmatex">\(X\)</span>的累积概率函数<span class="arithmatex">\(F(x)\)</span>应该满足以下条件：</p>
+<div class="arithmatex">\[
+\begin{align}
+&amp;\text{(1)}\space F(x)=P(X\leq x)=\sum\nolimits _{x_i\leq x}f(x_i) \nonumber\\
+&amp;\text{(2)}\space  0\leq F(x)\leq 1 \nonumber\\
+&amp;\text{(3)}\space \text{If}\space x\leq y,\space \text{then}\space F(x)\leq F(y)\qquad\qquad
+\end{align}
+\]</div>
+</div>
+<p>累积分布函数的性质(1)和(2)是由它的定义所决定的。而性质(3)则是因为事件的包含性决定的。因为如果<span class="arithmatex">\(x\leq y\)</span>，则事件<span class="arithmatex">\(\{X\leq x\}\)</span>包含在事件<span class="arithmatex">\(\{X\leq y\}\)</span>中。你概率质量函数一样，累积概率函数也提供概率。即使只假定随机变量<span class="arithmatex">\(X\)</span>只取整数值，累积分布函数也可以被定义为非整数值。在实例3.4中，可以有<span class="arithmatex">\(F(1.5)=P{X\leq 1.5}=P(X=0)+P(X=1)=0.9477\)</span>。下面我们用实例解释如何用累积分布函数计算概率质量函数。</p>
+<div class="admonition note">
+<p class="admonition-title">实例3.5</p>
+<p>从下面给出的随机变量<span class="arithmatex">\(X\)</span>的累积分布函数计算它的概率质量函数：</p>
+<div class="arithmatex">\[
+F(x)=
+\begin{cases}
+    &amp;0      &amp;\qquad x&lt; -2 \\
+    &amp;0.2    &amp;\qquad x-2\leq x &lt;0 \\
+    &amp;0.7    &amp;\qquad 0\leq x &lt;2 \\
+    &amp;1      &amp;\qquad 2\leq x       
+\end{cases}
+\]</div>
+<p>图3.2显示了<span class="arithmatex">\(X\)</span>的累积分布函数。从图中我们看到，只有点<span class="arithmatex">\(\{-2,0,2\}\)</span>才接受非零概率。每一个点的概率质量函数它的累积分布函数在该点的变化量。因此我们有：</p>
+<div class="arithmatex">\[
+\begin{align}
+f(-2) &amp;=0.2-0=0.2\nonumber\\
+f(0)  &amp;=0.7-0.2=0.5\nonumber\\
+f(2)  &amp;=1.0-0.7=0.3\nonumber
+\end{align}
+\]</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">图3.2、实例3.5的累积分布函数</p>
+<p><img alt="fig3.2" src="images/fig3.2.png" /></p>
+</div>
+<h2 id="34">3.4、离散随机变量的平均值和方差</h2>
+<p>有两个非常重要的数，它们可以描述随机变量概率分布的中心位置和分散程度(或变动程度)。它们就是平均值和方差。这两个数并不能唯一地描述概率分布。也即是说两个不同的分布有可能会有相同的平均值和方差。这有点类似于混凝土用砂的细度模数。细度模数可以描述砂子的粗细程度，但并不能唯一确定其级配。因为不同的筛分结果有可能会得到相同的细度模数。像这类数据，比如随机变量的平均值和方差，像混凝土用砂的细度模数，都是对事物某一性质的概要描述，并是能决定它们的性质，但却给我们非常强制信息，是非常重要的一类数据。</p>
+<div class="admonition note">
+<p class="admonition-title">平均值和方差</p>
+<p>离散随机变量<span class="arithmatex">\(X\)</span>的<strong>平均值</strong>(mean)或<strong>期望值</strong>(expected value)用<span class="arithmatex">\(\mu\)</span>表示，它由下述公式(3)确定。</p>
+<div class="arithmatex">\[
+\begin{equation}
+\mu=E(X)=\sum_{x}xf(x) \qquad\qquad
+\end{equation}
+\]</div>
+<p><span class="arithmatex">\(X\)</span>的<strong>方差</strong>(variance)用<span class="arithmatex">\(\sigma^2\)</span>表示，它等于:</p>
+<div class="arithmatex">\[
+\sigma^2=V(X)=E(X-\mu)^2=\sum_x(x-\mu)^2f(x)=\sum_xx^2f(x)-\mu^2
+\]</div>
+<p><span class="arithmatex">\(X\)</span>的<strong>标准差</strong>(standard deviation)为<span class="arithmatex">\(\sigma=\sqrt{\sigma}^2\)</span>。</p>
+</div>
+<p><span class="arithmatex">\(X\)</span>的平均值实质上是它取值的加权平均值(weighted average)，其权就是每一个可能值的概率。如果概率质量函数<span class="arithmatex">\(f(x)\)</span>是细长梁上的荷载，那么<span class="arithmatex">\(E(x)\)</span>就是梁的平衡点。同样地，<span class="arithmatex">\(E(X)\)</span>用类似于平衡点的方式描述的是<span class="arithmatex">\(X\)</span>分布的“中心点”。图3.3描述了这种类似性。</p>
+<p>随机变量<span class="arithmatex">\(X\)</span>的方差则是它的可能值的分散程度的量度。方差针对<span class="arithmatex">\((x-\mu)^2\)</span>做加权平均，其权就是<span class="arithmatex">\(f(x)\)</span>。</p>
+<p>图3.3例示了平均值相同但方差不同的概率分布。</p>
+<div class="admonition note">
+<p class="admonition-title">图3.3、概率分布可以视为细长梁上的荷载，其平均值就是平衡点。</p>
+<p><img alt="fig3.3" src="images/fig3.3.png" /></p>
+</div>
+<p>即使平均值和方差完全相同，随机变量的概率也可能不相同。图3.4例示了这一点。</p>
+<div class="admonition note">
+<p class="admonition-title">图3.4、有相同平均值和方差的不同分布</p>
+<p><img alt="fig3.4" src="images/fig3.4.png" /></p>
+</div>
+<p>再看看方差的定义，它实质上是随机变量<span class="arithmatex">\(X\)</span>的某一个函数的期望值，在这里这个函数就是<span class="arithmatex">\(h(X)=(X-\mu)^2\)</span>。一般地，任何随机变量<span class="arithmatex">\(X\)</span>的函数<span class="arithmatex">\(h(X)\)</span>的期望值可以用类似的方式来定义：</p>
+<div class="admonition note">
+<p class="admonition-title">离散随机变量函数的期望值</p>
+<p>如果<span class="arithmatex">\(X\)</span>是离散随机变量，其概率质量函数是<span class="arithmatex">\(f(x)\)</span>，则它的函数的期望值为：</p>
+<div class="arithmatex">\[
+\begin{equation}
+E[h(X)]=\sum_{x}h(x)f(x)\qquad\qquad
+\end{equation}
+\]</div>
+</div>
+<h2 id="35">3.5、几个重要的离散随机变量分布</h2>
+<p>人们经过大量的工程实践和研究，已总结出了大量的离散随机变量的分布函数。我们只是择要介绍几个工程和生活中常常可以用到的重要分布。</p>
+<h3 id="351">3.5.1、离散均匀分布</h3>
+<p>最简单的离散随机变量分布就是离散均匀分布。假定随机变量的可能取值为<span class="arithmatex">\(\{x_1,x_2\,cdots,x_n\}\)</span>，且每一个取值的概率都相等，即<span class="arithmatex">\(1/n\)</span>。这是一个非常有用的分布。</p>
+<div class="admonition note">
+<p class="admonition-title">离散均匀分布</p>
+<p>随机变量<span class="arithmatex">\(X\)</span>的是<strong>离散均匀分布</strong>(discrete uniform distribution)，只要它的可能的<span class="arithmatex">\(n\)</span>个值的概率完全相同，那么有：</p>
+<div class="arithmatex">\[
+\begin{equation}
+f(x_i)=1/n \qquad\qquad
+\end{equation}
+\]</div>
+<p>假设离散随机变量<span class="arithmatex">\(X\)</span>的可能取值为连续整数<span class="arithmatex">\(\{a,a+1,a+2,\cdots,b\}\text{for}\space a\leq b\)</span>，则它的平均值为：</p>
+<div class="arithmatex">\[
+\mu=E(X)=\frac{a+b}{2}
+\]</div>
+<p>其方差为：</p>
+<div class="arithmatex">\[
+\begin{equation}
+\sigma^2=\frac{(b-a+1)^2-1}{12}\qquad
+\end{equation}
+\]</div>
+</div>
+<h3 id="352">3.5.2、二项式分布</h3>
+<p>设想下面的随机实验和随机变量：
+1. 抛一个硬币10次，设<span class="arithmatex">\(X=正面向上的次数\)</span>。</p>
+<ol>
+<li>
+<p>有磨损的机床会产生1％的次品，设<span class="arithmatex">\(X=25个产品中的次品数\)</span>。</p>
+</li>
+<li>
+<p>每一个空气样本中都有10％的可能包含一个罕见的分子。设<span class="arithmatex">\(X=18个空气样本中包含罕见分子的样本数\)</span>。</p>
+</li>
+<li>
+<p>所有数字位通过数字传输通道后，有10%的可能收到错误数字位。设<span class="arithmatex">\(X=5个接收位中错误位的个数\)</span>。</p>
+</li>
+<li>
+<p>多问题选择的测验中，共有10个问题，每一个有四个答案，假设每一个问题都用猜测来回答。设<span class="arithmatex">\(X=回答正确的问题数\)</span>。</p>
+</li>
+<li>
+<p>在医院诞生的20个婴儿。设<span class="arithmatex">\(X=诞生的男婴数量\)</span>。</p>
+</li>
+<li>
+<p>所有患特殊病的患者中，服用特定药物后有35％的可能病情得到改善。在100个服用此药物的患者中，设<span class="arithmatex">\(X=病情改善的患者数量\)</span>。</p>
+</li>
+</ol>
+<p>所有这些随机实验都有一个共同点，例示了一个通用的概率模型。这些实验都由一系列重复的随机判决组成：在实验1中的抛硬币、实验2中25个零件的次品数等等。每一种情况下的随机变量都是与满足某种判决条件有关的数量。每一次判决又都可以抽象为判决<em>成功</em>(success)和<em>失败</em>(fail)两个结果。在这里成功和失败判决只是一个标签，事实上我们也可以用A和B来代替，也可以用0和1代替。</p>
+<p>只有两个可能结果的判决可以视为一个模块，常常用于构建概率模型的模块称为<strong>伯努利判决</strong>(Bernoulli trial)的随机实验。这个判决常常假定构成判决的随机实验是<strong>独立</strong>的。这也表示一次判决对下一次判决没有影响。另外，假定<strong>每一次成功判决的概率是常数</strong>也是一种合理的假设。在多问题多选择测试中，如果应试者完全没有测试题目的相关知识，他只是猜测答案，则可以假定<em>每一个题目</em>他选择正确答案的概率为<span class="arithmatex">\(1/4\)</span>。</p>
+<p>由这些实例，我们可以抽象出二项式分布的概率分布模型。</p>
+<div class="admonition note">
+<p class="admonition-title">二项式分布</p>
+<p>随机实验由<span class="arithmatex">\(n\)</span>个伯努利判决组成，它们满足：</p>
+<p>(1)&nbsp;&nbsp;判决实验是独立的</p>
+<p>(2)&nbsp;&nbsp;每一次判决实验只有两个结果，标记为“成功”和“失败“。</p>
+<p>(3)&nbsp;&nbsp;用<span class="arithmatex">\(p\)</span>表示每一次判决成功的概率，它是一个常数。</p>
+<p>随机变量<span class="arithmatex">\(X\)</span>等于成功的判决数就是一个二项式随机变量，它的参数是<span class="arithmatex">\(0&lt;p&lt;1\)</span>和<span class="arithmatex">\(n=0,1,2,\cdots\)</span>。则<span class="arithmatex">\(X\)</span>的概率质量函数为：</p>
+<div class="arithmatex">\[
+\begin{equation}
+f(x)=C_x^np^x(1-p)^{n-x} \qquad x=0,1,2,\cdots\qquad
+\end{equation}
+\]</div>
+<p>其中：</p>
+<div class="arithmatex">\[
+C_x^n =
+\begin{pmatrix}
+    n\\
+    x
+\end{pmatrix} =\frac{n!}{x!(n-x)!}
+\]</div>
+</div>
+<p>按组合数学的结论，<span class="arithmatex">\(C_x^n\)</span>表达了<span class="arithmatex">\(x\)</span>次成功和<span class="arithmatex">\(n-x\)</span>次失败的判决实验结果的总数。公式(7)所表示的概率分布是非常有用的公式，可以用到许多工程和生活的实例中去。这个分布之所以称为二项式分布，有两个来源。第一个来源于<em>二项式展开式</em>。对于常数 <span class="arithmatex">\(a\)</span>和<span class="arithmatex">\(b\)</span>，二项式的展开式为：</p>
+<div class="arithmatex">\[
+(a+b)^n=\sum_{k=0}^n
+\begin{pmatrix}
+n\\
+x
+\end{pmatrix}
+a^kb^{n-k}
+\]</div>
+<p>设<span class="arithmatex">\(p=a\)</span>和<span class="arithmatex">\(b=1-p\)</span>，则上式右边的和就是概率之各，左边则等于1，表明概率总合为1，满足概率公理。这表明二项式分布的概率可以将成功和失败的概率视为二项的两项。另外一个含义则是它的判决实验只有可能的取值。</p>
+<div class="admonition note">
+<p class="admonition-title">实例3.6</p>
+<p>每一个水的样本都有10％的可能包含有特定的有机污染物。假定样本是从有污染的水源中独立抽取的。试求在18个样本中正好有2个样本中含有污染物的概率。</p>
+<p>设<span class="arithmatex">\(X＝18个样本中包含有污染的样本数\)</span>。则<span class="arithmatex">\(X\)</span>是二项式随机变量，其参数为<span class="arithmatex">\(p=0.1\)</span>和<span class="arithmatex">\(n=18\)</span>。因此：</p>
+<div class="arithmatex">\[
+P(X=2)=
+\begin{pmatrix}
+18\\
+2
+\end{pmatrix}
+(0.1)^2(0.9)^{16}=0.284
+\]</div>
+<p>我们再计算至少有4个样本包含污染物的概率：</p>
+<div class="arithmatex">\[
+P(X\geq 4)=\sum_{x=4}^{18}
+\begin{pmatrix}
+18\\
+x
+\end{pmatrix}(0.1)^x(0.9)^{18-x}
+\]</div>
+<p>这样需要计算14项，但依据概率公理，我们有:</p>
+<div class="arithmatex">\[
+\begin{align}
+P(X\geq 4)&amp;=1-P(X&lt;3)\nonumber\\
+&amp;=1-\sum_{x=0}^{3}
+\begin{pmatrix}
+18\\
+x
+\end{pmatrix}
+(0.1)^x(0.9)^{18-x}\nonumber\\
+&amp;=1-[0.150+0.300+0.284+0.168]\nonumber\\
+&amp;=0.098\nonumber
+\end{align}
+\]</div>
+<p>只需要计算多项式展开式的四项。</p>
+<p>还可以计算<span class="arithmatex">\(X\)</span>在<span class="arithmatex">\([3,7)\)</span>内的概率：</p>
+<div class="arithmatex">\[
+\begin{align}
+P(3\leq X&lt; 7)&amp;=\sum_{x=3}^{6}
+\begin{pmatrix}
+18\\
+x
+\end{pmatrix}(0.1)^{x}(0.9)^{18-x}\nonumber\\
+&amp;=0.168+0.070+0.022+0.005\nonumber\\
+&amp;=0.265\nonumber
+\end{align}
+\]</div>
+</div>
+<p><a href="http://www.math.hawaii.edu/~xander/fa12_471/Binomial_Probabilities.pdf">累积二项分布概率表</a>(table of cumulative binomial probability)可以用来快速计算二项分布的概率。比如，如果<span class="arithmatex">\(p=01\)</span>并且<span class="arithmatex">\(n=4\)</span>，则可以按下述方法计算<span class="arithmatex">\(P(X=2)\)</span>：</p>
+<div class="arithmatex">\[
+P(X=2)=P(X\leq 2) - P(X\leq 1)=0.9963-0.9477=0.0486
+\]</div>
+<p>二项分布的平均值和方差可以按其定义得到。</p>
+<div class="admonition note">
+<p class="admonition-title">二项式分布的平均值和方差</p>
+<p>如果<span class="arithmatex">\(X\)</span>是二项式分布随机变量，其参数为<span class="arithmatex">\(p\)</span>和<span class="arithmatex">\(n\)</span>，则它的平均值和方差为：</p>
+<div class="arithmatex">\[
+\begin{align}
+\mu=E(X)=np \qquad \text{和}\qquad \sigma^2=V(X)=np(1-p) \qquad
+\end{align}
+\]</div>
+</div>
+<h3 id="353">3.5.3、几何分布和负二项式分布</h3>
+<h4 id="3531">3.5.3.1、几何分布</h4>
+<p>设想一个与二项式分布特别相关的随机实验。假定有一系列的伯努利判决实验(独立的随机实验，每一次都有相同的成功概率<span class="arithmatex">\(p\)</span>)。但是实验次数并非固定的，实验一直进行下去直到出现第一次成功实验为止。比如，从一批零件中一直抽样检验，直到检查到第一个次品零件为止。则随机变量<span class="arithmatex">\(X\)</span>的取值就是此时所执行的检验次数。</p>
+<p>我们可以把实验验分为前后几步，这样的随机事件变成了条件事件，可以用乘法得到它的概率。</p>
+<div class="admonition note">
+<p class="admonition-title">几何分布</p>
+<p>在一系列的伯努利判决实验(独立判决，每一次成功的概率都为常数<span class="arithmatex">\(p\)</span>)中，判决实验一直执行直到第一次出现成功的为止。设随机变量<span class="arithmatex">\(X\)</span>表示此时共计执行的判决实验次数，<span class="arithmatex">\(X\)</span>即为<strong>几何随机变量</strong>，其参数为<span class="arithmatex">\(0&lt;p&lt;1\)</span>，并且：</p>
+<div class="arithmatex">\[
+\begin{equation}
+f(x)=(1-p)^{x-1}p \qquad x=1,2,\cdots\qquad
+\end{equation}
+\]</div>
+</div>
+<p>图3.5是几何随机变量的概率质量函数。注意，在<span class="arithmatex">\(x\)</span>处线的高度只有<span class="arithmatex">\(x-1\)</span>处高度的<span class="arithmatex">\((1-p)\)</span>倍。这表明概率按几何级数的方式递减。这是这个随机变量取名气由来。</p>
+<div class="admonition note">
+<p class="admonition-title">图3.5、参数为<span class="arithmatex">\(p\)</span>的几何概率分布</p>
+<p><img alt="fig3.5" src="images/fig3.5.png" /></p>
+</div>
+<p>很容易依据定义计算几何分布的平均值和方差。</p>
+<div class="admonition note">
+<p class="admonition-title">几何分布的平均值和方差</p>
+<p>如果<span class="arithmatex">\(X\)</span>是几何随机变量，其参数为<span class="arithmatex">\(p\)</span>，则其平均值和方差为：</p>
+<div class="arithmatex">\[
+\begin{equation}
+\mu=E(X)=1/p\qquad\text{和}\qquad\sigma^2=V(X)=(1-p)/p^2\qquad
+\end{equation}
+\]</div>
+</div>
+<p><strong>缺乏记忆</strong>的性质：
+几何随机变量定义为判决实验一直执行直到第一次出现成功的判决时共计执行的判决实验次数。但是由于判决实验是独立的，直到下一次成功之前所有的判决实验都不会改变随机变量的概率分布。比如，在信息传输系统中，之前已传输了100位，之后在106位时接收到错误的数字位，这时它的概率与6位时出现成功的概率相同，这个概率就是<span class="arithmatex">\((0.9)^5(0.1)=0.059\)</span>，它与发生错误发生在第6位时的概率完全相同。</p>
+<p>这意味着使用几何模型要求系统永远没有磨损，在整个传输过程中错误率保持不变。正是在这种意义上，我们称几何分布没有记忆。</p>
+<h4 id="3532">3.5.3.2、负二项式分布</h4>
+<p>将几何分布推广一步，判决实验一直进行下去，直到有<span class="arithmatex">\(r\)</span>次成功为止。这时随机变量是此时执行的判决试验次数。这个随机变量的分布就是<strong>负二项式分布</strong>。这与二项式分布是不同的。二项式分布是有一个总的判决执行次数，而随机变量取值是有<span class="arithmatex">\(r\)</span>个成功次数。而负二项分布是没有判决实验执行限制，只要出现<span class="arithmatex">\(r\)</span>成功即停止。且变量取值是此时执行的判决实验次数。</p>
+<div class="admonition note">
+<p class="admonition-title">负二项式分布</p>
+<p>在一系列伯努利判决实验(独立判决，成功概率为常数<span class="arithmatex">\(p\)</span>)中，设随机变量<span class="arithmatex">\(X\)</span>表示判决实验出现<span class="arithmatex">\(r\)</span>次成功时共计执行的判决次数。则随机变量<span class="arithmatex">\(X\)</span>就是参数为<span class="arithmatex">\(0&lt;p&lt;1\)</span> 并且 <span class="arithmatex">\(r=1,2,3,\cdots\)</span> 的<strong>负二项式分布</strong>, 并且有：</p>
+<div class="arithmatex">\[
+\begin{equation}
+f(x)=\begin{pmatrix}
+x-1\\
+r-1
+\end{pmatrix} (1-p)^{x-r}p^r\qquad x=r,r+1,r+2,\cdots\qquad
+\end{equation}
+\]</div>
+</div>
+<p>因为需要<span class="arithmatex">\(r\)</span>次成功，所以执行的判决实验次数至少得有<span class="arithmatex">\(r\)</span>次，因此<span class="arithmatex">\(X\)</span>的取值就是<span class="arithmatex">\([r, \infty]\)</span>。如果<span class="arithmatex">\(r=1\)</span>成变成了二项式分布。图3.6绘制了某些负二项分布的图形。</p>
+<div class="admonition note">
+<p class="admonition-title">图3.6、某些负二项式分布</p>
+<p><img alt="fig3.6" src="images/fig3.6.png" /></p>
+</div>
+<p>设<span class="arithmatex">\(X\)</span>表示获得<span class="arithmatex">\(r\)</span>次成功时的判决实验次数，<span class="arithmatex">\(X_1\)</span>是获得第一次成功时判决实验成功的次数，设<span class="arithmatex">\(X_2\)</span>表示从第一次成功后第二次再获得成功的判决实验次数，<span class="arithmatex">\(X_3\)</span>是第二次获得成功后到第三次获得成功时判决实验的次数，等等。每一个这样的随机变量都是几何分布。所以获得<span class="arithmatex">\(r\)</span>次成功判决后的总次数<span class="arithmatex">\(X=X_1+X_2+\cdots+X_r\)</span>。几何分布没有记忆性，并且每一个几何分布随机变量都是独立的随机变量，且每一次判决实验都有相同的<span class="arithmatex">\(p\)</span>。这样负二项式分布就可以解释为<span class="arithmatex">\(r\)</span>个几何随机变量之各。图3.7例示了这一概念。</p>
+<div class="admonition note">
+<p class="admonition-title">图3.7、负二项式分布可以表达为几何分布的和</p>
+<p><img alt="fig3.6" src="images/fig3.7.png" /></p>
+</div>
+<p>还记得二项式分布就是<span class="arithmatex">\(n\)</span>次判决实验中成功的次数。也就是说这个数值是预先指定的，并且成功次数是随机的。而负二项分布随机变量是获得<span class="arithmatex">\(r\)</span>次成功后执行判决实验的次数。也就是成功次数是预先指定的，而判决实验的次数是随机的。在这种意义上，负二项式随机变量可以认为是相反的，或负的二项式随机变量。依据平均值和方差的定义以及负二项分布是几何随机变量之和的概念，我们可以确定负二项式随机变量的平均值和方差。</p>
+<div class="admonition note">
+<p class="admonition-title">负二项式的平均值和方差</p>
+<p>如果<span class="arithmatex">\(X\)</span>是负二项式随机变量，其参数为<span class="arithmatex">\(p\)</span>和<span class="arithmatex">\(r\)</span>，则：</p>
+<div class="arithmatex">\[
+\begin{equation}
+\mu=E(X)=r/p\qquad\text{和}\qquad\sigma^2=V(X)=r(1-p)/p^2\qquad
+\end{equation}
+\]</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">实例3.7</p>
+<p>一个Web站点准备了三台完全相同的计算机服务器，其中一台服役，另外两台备用。只要服役的计算机失效，则立即激活另外一台服役。每一台激活的服务器的请求服务的失效概率都是0.0005。假定每一次请求就是一次独立判决实验，那么直到3台都失效的请求平均值会是多少呢？</p>
+<p>设<span class="arithmatex">\(X\)</span>表示直到3台服务器都失效的请求数，<span class="arithmatex">\(X_1,X_2\)</span>和<span class="arithmatex">\(X_3\)</span>表示第1台、第2台、和第3台服务器失效之前的请求数。现在<span class="arithmatex">\(X=X_1+X_2+X_3\)</span>。同时假定请求都 是独立的，且失效概率就是<span class="arithmatex">\(p=0.0005\)</span>。另外，每一台预备服务器在它被激活之前都不会受请求次数的影响。因此，<span class="arithmatex">\(X\)</span>就是一个负二项式分布，其参数为<span class="arithmatex">\(p=0.0005\)</span>、<span class="arithmatex">\(r=3\)</span>。三台服务器都失效的平均请求次数为:</p>
+<div class="arithmatex">\[
+E(X)=3/0.0005=6000
+\]</div>
+<p>现在我们再来分析三台服务器在五次请求内都失效的概率是多少呢？这个概率是<span class="arithmatex">\(P(X\leq 5)\)</span>。因为<span class="arithmatex">\(X\)</span>表示第3台服务器失效，所以有<span class="arithmatex">\(P(X\leq 2)=0\)</span>。因此:</p>
+<div class="arithmatex">\[
+\begin{align}
+P(X\leq 5)&amp;=P(X=3)+P(X=4)+P(X=5)\nonumber\\
+&amp;=0.0005^3+\begin{pmatrix}3\\2\end{pmatrix}0.0005^3(0.9995)\nonumber\\&amp;\qquad{}+\begin{pmatrix}4\\2\end{pmatrix}0.0005^3(0.9995)^2\nonumber\\&amp;=1.249\times 10^{-9} \nonumber
+\end{align}
+\]</div>
+<p>因为判决实验都是独立的，所以到第3台服务器失效时的判决实验的平均值是第1台服务器失效时请求平均值的3倍。</p>
+</div>
+<p>这是以WEB服务器为例的。如果我们以混凝土搅拌机为例，以每搅拌一盘为一次判决实验，只要知道机器每搅拌一盘的失效概率，我们就能模拟搅拌机失效的平均搅拌次数。</p>
+<h3 id="354">3.5.4、泊松分布</h3>
+<p>当把二项式分布的判决实验次数推广到无穷大时，分布的平均值会保持为一个常数，这就是泊松分布，是一个具有广泛用途的随机分布。</p>
+<div class="admonition note">
+<p class="admonition-title">实例3.8</p>
+<p>沿着细长铜导线上会随机地产生缺陷。设<span class="arithmatex">\(X\)</span>表示一个随机变量，表示在长度为<span class="arithmatex">\(L\)</span>的导线上产生缺陷的数量，并且假定在<span class="arithmatex">\(L\)</span>长度上平均缺陷数为<span class="arithmatex">\(\lambda\)</span>。设想将铜导线分割为<span class="arithmatex">\(n\)</span>个小的子区间。如果子区间选择足够小，则在子区间中多于1个缺陷的概率就可以忽略不记。另外，我们缺陷是随机发生的，所以可以认为每一个子区间有相同的概率包含缺陷，设这个概率为<span class="arithmatex">\(p\)</span>。最后再假定子区间包含一个缺陷的概率是彼此独立的，则可以建模<span class="arithmatex">\(X\)</span>的分布为近似二项式随机变量。因为：</p>
+<div class="arithmatex">\[
+E(X)=\lambda=np
+\]</div>
+<p>所以可以得到：</p>
+<div class="arithmatex">\[
+p=\lambda/n
+\]</div>
+<p>也就是说，子区间包含一个缺陷的概率是<span class="arithmatex">\(\lambda/n\)</span>。只要子区间足够小，<span class="arithmatex">\(n\)</span>就会非常大，而<span class="arithmatex">\(p\)</span>会非常小。利用二项式分布的概率质量函数以及极限理论，可以求得随机变量的概率密度函数。</p>
+</div>
+<p>实例3.8可以举一返三地推广到许多随机实验的系统。区间可以是被分割的导线长度。但是同样的概率可以应用到任何区间，包括时间区间、面积或体积等等。比如，晶圆表面包含的污染颗粒数、成卷的纺织品上的缺陷、电话交换机的呼叫数、停电次数以及从样本中发射的粒子数。这些系统都已经成功地应用下面的概率密度函数来建模。</p>
+<p>一般来说，设想一个实数间隔<span class="arithmatex">\(T\)</span>，它被分割为众多的小区间，其长度为<span class="arithmatex">\(\Delta t\)</span>。假定<span class="arithmatex">\(\Delta t\)</span>趋近于零，</p>
+<p>(1) 在小区间中多于一个事件的概率趋向于零。</p>
+<p>(2) 在一个小区间中一个事件的概率趋向于<span class="arithmatex">\(\lambda\Delta t/T\)</span>。</p>
+<p>(3) 每一个子区间中的事件都是彼此独立的</p>
+<p>随机实验的这种性质就称为<strong>泊松过程</strong>(Poisson process)。</p>
+<p>这些假设表明可以将子区间视为一次近似的独立伯努利判决实验，其成功概率<span class="arithmatex">\(p=\lambda\Delta t/T\)</span>，判决实验次数为<span class="arithmatex">\(n=T/\Delta t\)</span>。在此<span class="arithmatex">\(pn=\lambda\)</span>，并且当<span class="arithmatex">\(\Delta t\)</span>趋于零时，<span class="arithmatex">\(n\)</span>趋于无穷大，因此利用二项式分布的概率质量函数和极限理论，可以得到如下定义：</p>
+<div class="admonition note">
+<p class="admonition-title">泊松分布</p>
+<p>随机变量<span class="arithmatex">\(X\)</span>等于泊松过程(Poisson process)的事件数，它就是一个<strong>泊松随机变量</strong>(Poisson random variable)，其参数为<span class="arithmatex">\(\lambda&lt;0\)</span>，并且其概率质量函数为：</p>
+<div class="arithmatex">\[
+\begin{equation}
+f(x)=\frac{e^{-\lambda}\lambda^x}{x!}\qquad x=0,1,2,\cdots \qquad
+\end{equation}
+\]</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">实例3.9</p>
+<p>仍然以细长铜导线为例。假定缺陷数满足泊松分布的要求，在其平均值为2.3flaw/mm。试求1mm导线上正好有两个缺陷的概率。</p>
+<p>设<span class="arithmatex">\(X\)</span>表示1mm导线的缺陷数，则有<span class="arithmatex">\(E(X)=2.3\text{flaw/mm}\)</span>，并且</p>
+<div class="arithmatex">\[
+P(X=2)=\frac{e^{-2.3}2.3^2}{2!}=0.265
+\]</div>
+<p>在5mm长的导线上有10个缺陷的概率是多少呢？设<span class="arithmatex">\(X\)</span>是5mm导线上的缺陷数，那么<span class="arithmatex">\(X\)</span>是一个泊松分布，它的平均值为：</p>
+<div class="arithmatex">\[
+E(X)=5\text{mm}\times 2.3\text{flaws/mm}=11.5\text{flaws}
+\]</div>
+<p>因此，5mm导线上有10个缺陷的概率为：</p>
+<div class="arithmatex">\[
+P(X=10)=e^{-11.5}\frac{11.5^{10}}{10!}=0.113
+\]</div>
+<p>再求2mm导线上至少有一个缺陷的概率。设<span class="arithmatex">\(X\)</span>是2mm导线上的缺陷数。那么<span class="arithmatex">\(X\)</span>服从泊松分布，它的平均值为：</p>
+<div class="arithmatex">\[
+E(X)=2\text{mm}\times 2.3\text{flaws/mm}=4.6\text{flaws}
+\]</div>
+<p>因此：</p>
+<div class="arithmatex">\[
+P(x\geq 1)=1-P(x=0)=1-e^{-4.6}=0.9899
+\]</div>
+<p>请注意：当要计算2mm导线上的概率时，则在2mm导线上的平均值<span class="arithmatex">\(2\lambda\)</span>要调整到4.6。利用这种调整，可以计算任意大小区间的概率。</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">泊松分布的平均值和方差</p>
+<p>如果<span class="arithmatex">\(X\)</span>是泊松随机变量，其参数为<span class="arithmatex">\(\lambda\)</span>，则：</p>
+<div class="arithmatex">\[
+\begin{equation}
+\mu=E(X)=\lambda\qquad\text{和}\qquad\sigma^2=V(X)=\lambda\qquad
+\end{equation}
+\]</div>
+</div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="second.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: 第二章 概率" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              第二章 概率
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="fourth.html" class="md-footer__link md-footer__link--next" aria-label="Next: 第四章 连续随机变量及其概率分布" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              第四章 连续随机变量及其概率分布
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": ".", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "assets/javascripts/workers/search.709b4209.min.js", "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.2b46852b.min.js"></script>
+      
+        <script src="javascripts/mathjax_config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
