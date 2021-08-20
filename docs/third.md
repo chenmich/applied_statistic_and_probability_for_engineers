@@ -580,6 +580,8 @@ $$
 
     - 几何分布(Geometric distribution)
 
+    - 缺乏记忆(lack memory)
+
     - 负二项式分布(Negative binomail distribtion)
 
     - 泊松过程(Poisson process)
