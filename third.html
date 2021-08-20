@@ -324,11 +324,6 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-        
           <li class="md-nav__item">
   <a href="#354" class="md-nav__link">
     3.5.4、泊松分布
@@ -340,26 +335,23 @@
     </nav>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#36" class="md-nav__link">
+    3.6、对离散随机变量的理解
+  </a>
+  
+</li>
       
     </ul>
   
 </nav>
       
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="fourth.html" class="md-nav__link">
-        第四章 连续随机变量及其概率分布
-      </a>
     </li>
   
 
@@ -461,11 +453,6 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-        
           <li class="md-nav__item">
   <a href="#354" class="md-nav__link">
     3.5.4、泊松分布
@@ -475,6 +462,18 @@
         
       </ul>
     </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#36" class="md-nav__link">
+    3.6、对离散随机变量的理解
+  </a>
   
 </li>
       
@@ -507,7 +506,7 @@
 </ol>
 </div>
 <h2 id="31">3.1、离散随机变量</h2>
-<p>许多系统，比如[第2章]的蒸馏实例，再比半导体生产，甚至于水泥生产、混凝土生产及浇筑等等系统，都可以用相同或相似的随机实验来模拟建模，它们都有相同的抽象模型。人们可以分析这些常见模型的随机变量分布，它们的结果又能用于其它领域的工程实例中。这是人类认识世界的模式，即举一返三的模式。在本章我们要分析少量几个常用常见的随机实验和<strong>离散随机</strong>变量。由于在随机实验这个抽象模型的基础上讨论，所以我们常常可以忽略具体系统底层的样本空间而直接描述特定随机变量的分布。</p>
+<p>许多系统，比如<a href="second.html">第2章</a>的蒸馏实例，再比半导体生产，甚至于水泥生产、混凝土生产及浇筑等等系统，都可以用相同或相似的随机实验来模拟建模，它们都有相同的抽象模型。人们可以分析这些常见模型的随机变量分布，它们的结果又能用于其它领域的工程实例中。这是人类认识世界的模式，即举一返三的模式。在本章我们要分析少量几个常用常见的随机实验和<strong>离散随机</strong>变量。由于在随机实验这个抽象模型的基础上讨论，所以我们常常可以忽略具体系统底层的样本空间而直接描述特定随机变量的分布。</p>
 <div class="admonition note">
 <p class="admonition-title">实例3.1</p>
 <p>商业用语音通讯系统常常包含48条外线。在某一特定时刻，观察系统会发现某些线路正在被使用。设随机变量<span class="arithmatex">\(X\)</span>表示正在使用的线路数量。那么<span class="arithmatex">\(X\)</span>可以是<span class="arithmatex">\(\{0,1,\cdots,48\}\)</span>之间的任何整数。当观察到系统正有10条线路在使用时，则<span class="arithmatex">\(x=10\)</span>。</p>
@@ -604,7 +603,8 @@ P(X\leq 3) &amp;= P(X=0)+P(X=1)+P(X=2)+P(X=3)\nonumber \\
 \]</div>
 <p>利用这个方法，还可以确定概率分布。即：
 $$
-P(X=3)=P(X\leq 3)-P(X\leq 2)=0.0036</p>
+P(X=3)=P(X\leq 3)-P(X\leq 2)=0.0036
+$$</p>
 </div>
 <p>从实例3.4我们知道，提供诸如<span class="arithmatex">\(P(X\leq 3)\)</span>这样的<strong>累积概率</strong>用于分析和研究是非常有帮助的，使用累积概率还能方便地确定概率质量函数。因此 ，累积概率代替概率质量函数用于描述随机变量也是非常好的方法。</p>
 <p>一般地，对于任意可能取值为<span class="arithmatex">\(\{x_1,x_2,\cdots,x_n\}\)</span>的离散随机变量，事件<span class="arithmatex">\(\{X=1\},\{X=2\},\cdots,\{X=n\}\)</span>是互斥事件，因此有<span class="arithmatex">\(P(X\leq x)=\sum_{x_i\leq x}f(x_i)\)</span>。</p>
@@ -663,7 +663,7 @@ f(2)  &amp;=1.0-0.7=0.3\nonumber
 <div class="arithmatex">\[
 \sigma^2=V(X)=E(X-\mu)^2=\sum_x(x-\mu)^2f(x)=\sum_xx^2f(x)-\mu^2
 \]</div>
-<p><span class="arithmatex">\(X\)</span>的<strong>标准差</strong>(standard deviation)为<span class="arithmatex">\(\sigma=\sqrt{\sigma}^2\)</span>。</p>
+<p><span class="arithmatex">\(X\)</span>的<strong>标准差</strong>(standard deviation)为<span class="arithmatex">\(\sigma=\sqrt{\sigma^2}\)</span>。</p>
 </div>
 <p><span class="arithmatex">\(X\)</span>的平均值实质上是它取值的加权平均值(weighted average)，其权就是每一个可能值的概率。如果概率质量函数<span class="arithmatex">\(f(x)\)</span>是细长梁上的荷载，那么<span class="arithmatex">\(E(x)\)</span>就是梁的平衡点。同样地，<span class="arithmatex">\(E(X)\)</span>用类似于平衡点的方式描述的是<span class="arithmatex">\(X\)</span>分布的“中心点”。图3.3描述了这种类似性。</p>
 <p>随机变量<span class="arithmatex">\(X\)</span>的方差则是它的可能值的分散程度的量度。方差针对<span class="arithmatex">\((x-\mu)^2\)</span>做加权平均，其权就是<span class="arithmatex">\(f(x)\)</span>。</p>
@@ -815,7 +815,7 @@ x
 \end{align}
 \]</div>
 </div>
-<p><a href="http://www.math.hawaii.edu/~xander/fa12_471/Binomial_Probabilities.pdf">累积二项分布概率表</a>(table of cumulative binomial probability)可以用来快速计算二项分布的概率。比如，如果<span class="arithmatex">\(p=01\)</span>并且<span class="arithmatex">\(n=4\)</span>，则可以按下述方法计算<span class="arithmatex">\(P(X=2)\)</span>：</p>
+<p><a href="http://www.math.hawaii.edu/~xander/fa12_471/Binomial_Probabilities.pdf">累积二项分布概率表</a>(table of cumulative binomial probability)可以用来快速计算二项分布的概率。比如，如果<span class="arithmatex">\(p=0.1\)</span>并且<span class="arithmatex">\(n=4\)</span>，则可以按下述方法计算<span class="arithmatex">\(P(X=2)\)</span>：</p>
 <div class="arithmatex">\[
 P(X=2)=P(X\leq 2) - P(X\leq 1)=0.9963-0.9477=0.0486
 \]</div>
@@ -842,7 +842,7 @@ f(x)=(1-p)^{x-1}p \qquad x=1,2,\cdots\qquad
 \end{equation}
 \]</div>
 </div>
-<p>图3.5是几何随机变量的概率质量函数。注意，在<span class="arithmatex">\(x\)</span>处线的高度只有<span class="arithmatex">\(x-1\)</span>处高度的<span class="arithmatex">\((1-p)\)</span>倍。这表明概率按几何级数的方式递减。这是这个随机变量取名气由来。</p>
+<p>图3.5是几何随机变量的概率质量函数。注意，在<span class="arithmatex">\(x\)</span>处线的高度只有<span class="arithmatex">\(x-1\)</span>处高度的<span class="arithmatex">\((1-p)\)</span>倍。这表明概率按几何级数的方式递减。这是这个随机变量取名由来。</p>
 <div class="admonition note">
 <p class="admonition-title">图3.5、参数为<span class="arithmatex">\(p\)</span>的几何概率分布</p>
 <p><img alt="fig3.5" src="images/fig3.5.png" /></p>
@@ -911,7 +911,7 @@ P(X\leq 5)&amp;=P(X=3)+P(X=4)+P(X=5)\nonumber\\
 <p>因为判决实验都是独立的，所以到第3台服务器失效时的判决实验的平均值是第1台服务器失效时请求平均值的3倍。</p>
 </div>
 <p>这是以WEB服务器为例的。如果我们以混凝土搅拌机为例，以每搅拌一盘为一次判决实验，只要知道机器每搅拌一盘的失效概率，我们就能模拟搅拌机失效的平均搅拌次数。</p>
-<h3 id="354">3.5.4、泊松分布</h3>
+<h4 id="354">3.5.4、泊松分布</h4>
 <p>当把二项式分布的判决实验次数推广到无穷大时，分布的平均值会保持为一个常数，这就是泊松分布，是一个具有广泛用途的随机分布。</p>
 <div class="admonition note">
 <p class="admonition-title">实例3.8</p>
@@ -975,6 +975,74 @@ P(x\geq 1)=1-P(x=0)=1-e^{-4.6}=0.9899
 \end{equation}
 \]</div>
 </div>
+<h2 id="36">3.6、对离散随机变量的理解</h2>
+<ol>
+<li>
+<p>在第二章介绍随机变量时，就已定义随机变量是一个函数，它为随机实验的结果分配一个值。这些值必定会有一个范围。从随机实验来看，它的所有结果各种都会有发生的概率，因此作为随机变量的取值也会有一定范围，每一个值的都会对应一定的概率。这是随机变量与随机实验之间的根本联系。因为有这种联系，所以随机变量的取值也成为了随机事件。有了随机事件，必定有随机事件发生的概率。而不同的随机事件以及它对应的发生概率就构成了它的概率分布。我们常常用概率质量函数和累计概率函数来表达这种分布。一般来说，可以用列表列出离散随机变量取值与对应概率来表达这种函数。但如果有这样的对应公式，其表达能力会更强大。</p>
+</li>
+<li>
+<p>可以用随机变量的平均值和方差来表达随机变量的平均程度和分散程度。平均值代表随机变量的取值中心，往往在该值附近的区域内概率最大，随机事件在该区域发生的可能性最大。从平均值是各个取值以概率为权的加权平均来看，它与力的平衡特别相似，平均值类似于力的平衡点。方差则代表了随机变量取值的分散程度，方差越大，随机变量取值越分散，反之则越集中。随机变量的函数也有平均值，是随机变量平均值的推广。 但是平均值和方差只是对概率分布的简单描述，它不能代替概率分布本身。</p>
+</li>
+<li>
+<p>在我们所介绍的离散随机变量中，主要(除离散均匀分布之外)以伯努利判决随机实验这一模式为基本模块构建出来的。伯努利判决随机实验的一个关键点是，每一次实验都是随机的独立的，每一次试验只有两次结果，分别用成功和失败来标注。因此这种底层的随机实验是完全相同的。但由于随机变量的取值方式不同，即随机变量不同，它会代表不同的随机过程。比如，二项式分布与几何分布、负二项分布以及泊松分布，其底层的随机实验都是伯努利判决实验。但它们是不同的分布，代表不同的随机过程，可以对应许多现实世界的系统和过程。</p>
+</li>
+<li>
+<p>我们研究这些随机变量的分布时，往往忽略了它们底层的发生机制，其原因就在于它们特别重要。为什么特别重要呢？就在于它们能用于许多现实系统和过程，因此它们本质上是对现实系统和过程的抽象，是这些系统和过程的模型。研究的目的在于应用，要做到举一返三才是应用。做到举一返三的前提是要认真区分这些离散随机变量之间的差异。</p>
+</li>
+<li>
+<p>均匀分布离散随机变量与本章所介绍的二项式分布、几何分布、负二项式分布和泊松分布完全不一样，并且它的底层机制十分简单，很好理解。但二项式分布等其底层的机制也是十分简单的，由于随机变量的取值不同，往往会让人产生误会。二项式分布的随机实验次数是固定的，这是它与其它分布不同之处。它的取值是在确定的实验次数内，判决实验成功事件发生次数。而几何分布中，实验次数是不确定的，实验一直要进行到发生第一次成功为止，因此实验次数也是有限的。这一点是两个分布的根本区别。不注意区分这一点，往往会选择错误的模型。而负二项分布则是对几何分布的扩展，它的取值规则要求判决实验一直进行下去，直到成功事件出现<span class="arithmatex">\(r\)</span>次。所以实验次数也是有限的。它可以看做是<span class="arithmatex">\(r\)</span>个二项式分布的和。最后是泊松分布。它与二项式分布等三个分布不同之处在于它的判决实验次数是无穷大。从极限的角度来理解泊松分布，自然而然地会导出泊松过程的概率。泊松分布就是在泊松过程的基础上随机变量的概率分布。这些分布的分布函数和平均值都已确定，但只有认识它们的不同和相同，我们才能在实际系统和过程中正确应用它们。应用是关键，也是本教材的目的。</p>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">重要概念</p>
+<ul>
+<li>
+<p>离散随机变量(Discrete random variable)</p>
+</li>
+<li>
+<p>离散随机变量概率分布(Probability distribution of discrete random variable)</p>
+</li>
+<li>
+<p>概率质量函数(Probability mass function, PMF)</p>
+</li>
+<li>
+<p>累积概率分布函数(Cumulative probability distribution fucntion)</p>
+</li>
+<li>
+<p>离散随机变量平均值(Mean of discrete random variable)</p>
+</li>
+<li>
+<p>离散随机变量平均值函数(Mean function of  discrete random variable)</p>
+</li>
+<li>
+<p>随风变量函数期望值(Expected value of function of discrete random variable)</p>
+</li>
+<li>
+<p>离散随机变量方差(Variance of discrete random variable)</p>
+</li>
+<li>
+<p>离散随机变量标准差(Standard deviation of discrete random variable)</p>
+</li>
+<li>
+<p>离散均匀分布(Discrete uniform distribution)</p>
+</li>
+<li>
+<p>二项式分布(Binomial distribution)</p>
+</li>
+<li>
+<p>几何分布(Geometric distribution)</p>
+</li>
+<li>
+<p>负二项式分布(Negative binomail distribtion)</p>
+</li>
+<li>
+<p>泊松过程(Poisson process)</p>
+</li>
+<li>
+<p>泊松分布(Poisson distribution)</p>
+</li>
+</ul>
+</div>
                 
               
               
@@ -1008,21 +1076,6 @@ P(x\geq 1)=1-P(x=0)=1-e^{-4.6}=0.9899
           </div>
         </a>
       
-      
-        
-        <a href="fourth.html" class="md-footer__link md-footer__link--next" aria-label="Next: 第四章 连续随机变量及其概率分布" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              第四章 连续随机变量及其概率分布
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
-        </a>
       
     </nav>
   
