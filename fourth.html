@@ -1,0 +1,1070 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.2">
+    
+    
+      
+        <title>第四章 连续随机变量及其概率分布 - Applied Statistic and Probability for Engineers</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.1118c9be.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ba0d045b.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    <script>function __prefix(e){return new URL(".",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#4" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="Applied Statistic and Probability for Engineers" class="md-header__button md-logo" aria-label="Applied Statistic and Probability for Engineers" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Applied Statistic and Probability for Engineers
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              第四章 连续随机变量及其概率分布
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="Applied Statistic and Probability for Engineers" class="md-nav__button md-logo" aria-label="Applied Statistic and Probability for Engineers" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Applied Statistic and Probability for Engineers
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        前言
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="first.html" class="md-nav__link">
+        第一章 统计思想和技术在工程实践中的关键作用
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="second.html" class="md-nav__link">
+        第二章 概率
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="third.html" class="md-nav__link">
+        第三章 离散随机变量及其概率分布
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          第四章 连续随机变量及其概率分布
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="fourth.html" class="md-nav__link md-nav__link--active">
+        第四章 连续随机变量及其概率分布
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#41" class="md-nav__link">
+    4.1、连续随机变量
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#42" class="md-nav__link">
+    4.2、概率分布和概率密度函数
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#53" class="md-nav__link">
+    5.3、累积分布函数
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#44" class="md-nav__link">
+    4.4、连续随机变量的平均值和方差
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#45" class="md-nav__link">
+    4.5、常见的连续随机变量分布
+  </a>
+  
+    <nav class="md-nav" aria-label="4.5、常见的连续随机变量分布">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#451" class="md-nav__link">
+    4.5.1、均匀分布
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#452" class="md-nav__link">
+    4.5.2、正态分布
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#453" class="md-nav__link">
+    4.5.3、正态化近似二项式分布和泊松分布
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#454" class="md-nav__link">
+    4.5.4、指数分布
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#455" class="md-nav__link">
+    4.5.5、威尔布分布
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#41" class="md-nav__link">
+    4.1、连续随机变量
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#42" class="md-nav__link">
+    4.2、概率分布和概率密度函数
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#53" class="md-nav__link">
+    5.3、累积分布函数
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#44" class="md-nav__link">
+    4.4、连续随机变量的平均值和方差
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#45" class="md-nav__link">
+    4.5、常见的连续随机变量分布
+  </a>
+  
+    <nav class="md-nav" aria-label="4.5、常见的连续随机变量分布">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#451" class="md-nav__link">
+    4.5.1、均匀分布
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#452" class="md-nav__link">
+    4.5.2、正态分布
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#453" class="md-nav__link">
+    4.5.3、正态化近似二项式分布和泊松分布
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#454" class="md-nav__link">
+    4.5.4、指数分布
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#455" class="md-nav__link">
+    4.5.5、威尔布分布
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="4">4、连续随机变量极其概率分布</h1>
+<p>气体动力学理论在统计和物理之间建立起了桥梁。物理学家James Maxwell设定某些假设，从而确定了气体在平衡时的分子速度的分布。分子碰撞的结果后回弹的方向是空间任意方向，这表明了等概率的概念。从这个概念出发，他假设分子碰撞后，在<span class="arithmatex">\(x\)</span>、<span class="arithmatex">\(y\)</span>和<span class="arithmatex">\(z\)</span>三个方向速度是等概率的并且它们之间相互独立变化。只这一项就显示了在特定方向<span class="arithmatex">\(x\)</span>的速度的概率分布是著名的正态连续概率分布。当然，这一基础分布还可以从其它角度探讨后(比如本章要讨论的中心极限定理)导出，但从分子运动动力学的角度讨论是最简单的。正态分布的角色例示了连续概念分布的在科学和工程领域的重要性。</p>
+<div class="admonition note">
+<p class="admonition-title">学习目标</p>
+<p>经过认真学习本章内容，可以做到：</p>
+<ol>
+<li>
+<p>从概率密度函数确定概率。</p>
+</li>
+<li>
+<p>从累积分布函数和确定概率以及从概率密度函数确定累积分布函数。</p>
+</li>
+<li>
+<p>计算连续随机变量的平均值和方差。</p>
+</li>
+<li>
+<p>理解某些常见连续随机变量分布的假设。</p>
+</li>
+<li>
+<p>为特定选择适当的连续概率分布计算其概率。</p>
+</li>
+<li>
+<p>计算某些常见概率分布的平均值和方差。</p>
+</li>
+<li>
+<p>标准化正态随机变量。</p>
+</li>
+<li>
+<p>使用标准正态分布的累积分布表计算概率。</p>
+</li>
+<li>
+<p>对某些二项式分布和泊松分布计算近似概率。</p>
+</li>
+</ol>
+</div>
+<h2 id="41">4.1、连续随机变量</h2>
+<p>假定在混凝土拌和站针对每天同一品种混凝土测定其立方抗压强度。在实际生产中总会有小的波动影响混凝土强度，这些波动可能来源于温度的变动、试件制作的差异、生产计量的微小变动、操作者的差异、材料的波动等等等等原因，因此，即使是同一批材料、同一配合比以及同一搅拌机生产的混凝土，其立方抗压强度都会有少的变动，并不会完全一样。所以所测得的混凝土立方抗压强度表达的是一个随机变量<span class="arithmatex">\(X\)</span>，并且用一个实数区间作为该随机变量的可能取值范围是合理的。还记得我们在<a href="second.html">第2章</a>中讨论过，具有一个(无论是有限还是无限)实数区间的随机变量就是<strong>连续随机变量</strong>。这个模型可用于任意精度的随机变量。</p>
+<p>因为随机变量<span class="arithmatex">\(X\)</span>的可能值是不可数的无限多，所以<span class="arithmatex">\(X\)</span>明显与前面所研究的离散随机变量不同。但是与离散随机变量一样的是，许多物理系统都可以使用相同或类似的连续随机变量建模。本章要会介绍这些随机变量，并提供计算概率的实例。</p>
+<h2 id="42">4.2、概率分布和概率密度函数</h2>
+<p>我们在力学研究领域常常用密度函数描述力的分布，也用密度描述许多其它的物理系统。比如在图4.1中，在细长梁的任意位置，其力的密度可以用密度来描述。间隔区间越大，则所受的荷载也越大。在两点<span class="arithmatex">\(a\)</span>和<span class="arithmatex">\(b\)</span>之间的荷载总量由区间<span class="arithmatex">\([a,b]\)</span>之间的积分确定。这个积分是密度函数曲线下部的面积。我们可以粗略地认为是这个区间内的荷载总值。</p>
+<div class="admonition note">
+<p class="admonition-title">图4.1、概率密度函数与力的密度函数</p>
+<p><img alt="fig4.1" src="images/fig4.1.png" /></p>
+</div>
+<p>类似地，<strong>概率密度函数</strong><span class="arithmatex">\(f(x)\)</span>可以用来描述<strong>连续随机变量</strong><span class="arithmatex">\(X\)</span>的分布。如果区间包含<span class="arithmatex">\(X\)</span>的某个值越大，那么相应地它的<span class="arithmatex">\(f(x\)</span>)<span class="arithmatex">\(也会越大。\)</span>X<span class="arithmatex">\(的概率就是曲线在\)</span>(a,b)$上的积分，也就是概率密度函数下的面积。</p>
+<p>由此我们可以得到函数密度函数的定义：</p>
+<div class="admonition note">
+<p class="admonition-title">概率密度函数</p>
+<p>对于连续随机变量<span class="arithmatex">\(X\)</span>，它的概率<strong>密度函数</strong>应该满足：</p>
+<div class="arithmatex">\[
+\begin{align}
+(1)&amp;\space f(x)\geq 0 \nonumber\\
+(2)&amp;\space \int_{-\infty}^{\infty}f(x)dx=1\nonumber\\
+(3)&amp;\space \text{对于任意的a和b} \qquad P(a\leq X\leq b)=\int_a^bf(x)dx=f(x)下从a到b的面积\qquad 
+\end{align}
+\]</div>
+</div>
+<p>概率密度函数为随机变量提供了简单的描述。只要<span class="arithmatex">\(f(x)\)</span>为非负函数、<span class="arithmatex">\(\int_{-\infty}^{\infty}f(x)dx=1\)</span>以及<span class="arithmatex">\(P(a\leq X\leq b)\leq 1\)</span>，则满足概率的定义。在如果<span class="arithmatex">\(x\)</span>处的事件不会发生，则概率密度函数为零；如果没有特别规定某个值的概率密度函数，也假定它为零。</p>
+<p>可以用<strong>柱状图</strong>近似概率密度函数，如图4.2所示。对于每一个柱状图所对应的区间，柱的面积等于此区间测量值的相对频率(比例)。相对频率是该区间事件发生概率的近似估计。类似地，在<span class="arithmatex">\(f(x)\)</span>下任意区间的面积等于在该区间事件发生的真实概率。</p>
+<div class="admonition note">
+<p class="admonition-title">图4.2、概率密度函数的近似柱状图</p>
+<p><img alt="fig4.2" src="images/fig4.2.png" /></p>
+</div>
+<p>最重要的一点就是<span class="arithmatex">\(f(x)\)</span><strong>用于计算面积</strong>，而这个面积表达了<span class="arithmatex">\(X\)</span>落在<span class="arithmatex">\([a,b]\)</span>之间的概率。以测试混凝土立方面抗压强度为例，<span class="arithmatex">\(X\)</span>在<span class="arithmatex">\([36\text{MPa}, 42\text{MPa}]\)</span>之间的概率就是<span class="arithmatex">\(X\)</span>的概率密度函数在这个区间的积分。对于混凝土立方抗压强度来说，这是一个相对很小的区间。通过适当地选择<span class="arithmatex">\(f(x)\)</span>的形状，我们可以表达任意随机变量的概率。<span class="arithmatex">\(f(x)\)</span>的形状决定了<span class="arithmatex">\(X\)</span>在<span class="arithmatex">\([36\text{MPa}, 42\text{MPa}]\)</span>的概率与其它相等长度区间或不同长度区间的概率的差异程度。</p>
+<p>对于细长梁上的荷载，因为每一点都是零宽度，所以在任何点上的荷载都是零。类似地，对于连续随机变量<span class="arithmatex">\(X\)</span>和任意值<span class="arithmatex">\(x\)</span>来说，我们也有：</p>
+<div class="arithmatex">\[
+P(X=x)=0
+\]</div>
+<p>从这一点来看，似乎连续随机变量的模型是无用的模型。但是，在现实世界中，当观察特定的混凝土立方抗压强度测量值时，比如，41.5MPa，这个值可以解释为是<span class="arithmatex">\([41.53, 41.54]\)</span>MPa经过圆整后的结果。因此，可以认为测量值41.5就是<span class="arithmatex">\(X\)</span>落在<span class="arithmatex">\([41.53, 41.54]\)</span>MPa的一个值，而它在这个区间的概率并非为零。类似地，因为每一个点都是零概率的，在计算连续随机变量概率时，就不必区分<span class="arithmatex">\(\leq\)</span>和<span class="arithmatex">\(&lt;\)</span>：</p>
+<div class="admonition note">
+<p>如果<span class="arithmatex">\(X\)</span>是<strong>连续随机变量</strong>，对于任意值<span class="arithmatex">\(x_2\)</span>和<span class="arithmatex">\(x_2\)</span>，有：</p>
+<div class="arithmatex">\[
+\begin{equation}
+P(X_1\leq X\leq x_2)=P(x_1&lt;X\leq x_2)=P(x_1\leq X&lt;x_2)=P(x_1&lt;X&lt;x_2)\qquad
+\end{equation}
+\]</div>
+</div>
+<h2 id="53">5.3、累积分布函数</h2>
+<p>与离散随机变量类似，我们也可以用累积分布函数来描述连续随机变量的分布。</p>
+<div class="admonition note">
+<p class="admonition-title">累积分布函数</p>
+<p>连续随机变量<span class="arithmatex">\(X\)</span>的<strong>累积分布函数</strong>为：</p>
+<div class="arithmatex">\[
+\begin{align}
+F(x)=P(X\leq x)=\int_{-\infty}^{x}f(u)du \qquad
+\text{其中} -\infty&lt;x&lt;\infty\qquad
+\end{align}
+\]</div>
+</div>
+<p>我们知道，<span class="arithmatex">\(P(X\leq x)=1-P(x\geq x)\)</span>。所以我们可以用累积分布密度函数来定义混凝土立方抗压强度的强度等级。比如，C35强度等级即混凝土的立方抗压强度<span class="arithmatex">\(X\)</span>的概率<span class="arithmatex">\(P(x\geq 35)=95%\)</span>。假期立方抗压强度的概率密度函数为<span class="arithmatex">\(f(x)\)</span>，则强度等级为C35的混凝土立方抗压强度的概率应该为：</p>
+<div class="arithmatex">\[
+P(X\geq 35)=1-P(35\leq X)=1-\int_{-\infty}^{35}f(u)du＝1－0.05＝0.95
+\]</div>
+<p>只要我们知道了混凝土的概率密度函数，可以轻易地计算出它的累积分布，从而也能清晰地定义混凝土的立方抗压强度的强度等级。混凝土的概率密度函数是正态分布。正态分布也是许多许多物理系统和过程的概率分布，它是如此重要，以致我们必须在本章接下来的内容要重点研究这个分布。</p>
+<h2 id="44">4.4、连续随机变量的平均值和方差</h2>
+<p>与离散随机变量一样，我们也可以定义它的平均值和方差，只是要用积分取代求和。考虑到积分的本质也是求和，所以平均值和方差的定义的本质是相同的。同样地，如果像图4.1那样把概率密度函数视为荷载密度，则概率密度对应了细长梁上荷载的平衡点。</p>
+<div class="admonition note">
+<p class="admonition-title">平均值和方差</p>
+<p>假定<span class="arithmatex">\(X\)</span>是连续随机变量，其概率密度函数为<span class="arithmatex">\(f(x)\)</span>，它的<strong>平均值</strong>或<strong>期望值</strong>用<span class="arithmatex">\(\mu\)</span>或<span class="arithmatex">\(E(X)\)</span>表示，它们应该是：</p>
+<div class="arithmatex">\[
+\begin{equation}
+\mu=E(X)=\int_{-\infty}^{\infty}xf(x)dx \qquad
+\end{equation}
+\]</div>
+<p>它的方差为<span class="arithmatex">\(V(X)\)</span>或<span class="arithmatex">\(\sigma^2\)</span>，它应该是：</p>
+<div class="arithmatex">\[
+\sigma^2=V(X)=\int_{-\infty}^{\infty}(x-\mu)^2f(x)dx=\int_{-\infty}^{\infty}x^2f(x)dx-\mu^2
+\]</div>
+<p><span class="arithmatex">\(X\)</span>的<strong>标准差</strong>为<span class="arithmatex">\(\sigma=\sqrt{\sigma^2}\)</span></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">连续随机变量函数的期望值</p>
+<p>如果连续随机变量的概率密度函数为<span class="arithmatex">\(f(x)\)</span>，那么：</p>
+<div class="arithmatex">\[
+\begin{equation}
+E[h(X)]=\int_{-\infty}^{\infty}h(x)f(x)dx\qquad
+\end{equation}
+\]</div>
+</div>
+<h2 id="45">4.5、常见的连续随机变量分布</h2>
+<p>与离散随机变量分布一样，人们也对各种各样的连续随机变量分布做了详细研究，我们在这里介绍几个最常用的分布。</p>
+<h3 id="451">4.5.1、均匀分布</h3>
+<p>连续随机变量也有均匀分布。它的概率密度函数在整个分布区间内是一个常数。</p>
+<div class="admonition note">
+<p class="admonition-title">连续均匀分布</p>
+<p>如果<span class="arithmatex">\(X\)</span>为密度函数应为：</p>
+<div class="arithmatex">\[
+\begin{equation}
+f(x)=1/(b-a)\qquad a\leq x\leq b\qquad
+\end{equation}
+\]</div>
+<p>则<span class="arithmatex">\(X\)</span>就是<strong>连续均匀分布随机变量</strong></p>
+</div>
+<p>按照连续随机变量的平均值和方差定义，利用积分原理可以确定连续均匀分布的平均值和方差。</p>
+<div class="admonition note">
+<p class="admonition-title">平均值和方差</p>
+<p>如果<span class="arithmatex">\(X\)</span>是在区间<span class="arithmatex">\([a, b]\)</span>上的连续均匀分布随机变量，那么它的平均值为和方差为：</p>
+<div class="arithmatex">\[
+\begin{equation}
+\mu=E(X)=\frac{a+b}{2}\qquad\text{和}\qquad\sigma^2=V(X)=\frac{(b-a)^2}{12}\qquad
+\end{equation}
+\]</div>
+</div>
+<p>根据累积分布函数的定义，可以得到在<span class="arithmatex">\([a, b]\)</span>上的均匀分布连续随机变量<span class="arithmatex">\(X\)</span>，在<span class="arithmatex">\(x\)</span>处的累积分布函数为：</p>
+<div class="arithmatex">\[
+F(x)=\begin{cases}
+0&amp;\qquad x&lt;a \\
+(x-a)/(b-a)&amp;\qquad a\leq x&lt;b\\
+1&amp;\qquad b\leq x
+\end{cases}
+\]</div>
+<h3 id="452">4.5.2、正态分布</h3>
+<p><strong>正态分布</strong>是最广泛应用的随机变量分布模型。无论何时只要是重复随机实验，等于所有实验输出结果平均值(或总值)的随机变量随着实验重复数量的增大就趋向于正态分布。De Moivre在1733年首先提出了这一结果，也就是著名的<strong>中心极限定理</strong>。不幸的是他的著述在某时间遗失了。近100年后Gauss独立开发了正态分布。后来虽然确认是De Moivre完成了推展取得了成果，但正态分布仍然还是常常称为<strong>Gaussian分布</strong>。</p>
+<p>那么人们一定会问题一个问题，即何时我们才计算重复实验的平均值(或总值)？答案是总会这样做。如果假定每一个测量值都是来自同一随机变量的重复实验，比如在同材料、同强度等级以及同配合比的连续混凝土生产过程中重复取样测量的立方抗压强度，那么可以认为这个平均值就是近似等于正态分布。而这个结论是本教材后面章节要介绍的主要内容。</p>
+<p>中心极限定理深入到了统计分析的全过程中。有时它们可能并不明显。比如假定混凝土立方抗压强度的偏差可能来自于许许多多因素的影响总和，这些影响可能是各种材料的波动、也可能是称量的波动、也可能是温度、湿度的波动，还可能是人的差异影响，当然测量仪器也会有波动，总之有我们还未掌握或未加严格控制因素的共同作用和影响。如果每一组试件的误差都是独立的，并且正负的似然率相同，这时立方抗压强度的偏差(或误差)就是正态分布的随机变量。再比如物理学家Maxwell在简单地假设了气体分子运动速度的基础上就能推导出气体分子的运动动力学。</p>
+<p>人们常常利用正态分布来证明某些复杂形式的随机变量的概率密度函数。现在我们的目标是计算正态分布随机变量的概率。后面还会再详细讨论中心极限定理。</p>
+<p>有不同平均值和方差的随机变量，只要它是正态分布，我们都可以通过适当地选择它的曲线中心点和宽度来建模它的概率密度函数。平均值<span class="arithmatex">\(E(X)=\mu\)</span>确定了概率密度函数曲线的中心点，而方差<span class="arithmatex">\(V(X)=\sigma^2\)</span>决定了它的宽度。图4.3显示了几个不同中心点和宽度的正态随机变量概率密度函数曲线。它们都是中心对称的但分散程度不同的钟形曲线。</p>
+<div class="admonition note">
+<p class="admonition-title">图4.3、不能参数<span class="arithmatex">\(\mu\)</span>和<span class="arithmatex">\(\sigma^2\)</span>的正态概率密度函数</p>
+<p><img alt="fig4.3" src="images/fig4.3.png" /></p>
+</div>
+<p>无论图形多么形象，要做进一步的数字分析，还是公式更为简洁。</p>
+<div class="admonition note">
+<p class="admonition-title">正态分布</p>
+<p>如果随机变量<span class="arithmatex">\(X\)</span>的概率密度函数为：</p>
+<div class="arithmatex">\[
+\begin{equation}
+f(x)=\frac{1}{\sqrt{2\pi}\sigma}e^{\frac{-(x-\mu)^2}{2\sigma^2}}\qquad -\infty&lt;x&lt;\infty\qquad
+\end{equation}
+\]</div>
+<p>则它是<strong>正态分布随机变量</strong>，其参数为<span class="arithmatex">\(\mu\space\text{且}-\infty&lt;\mu&lt;\infty\)</span>以及<span class="arithmatex">\(\sigma&gt;0\)</span>。</p>
+<p>另外：</p>
+<div class="arithmatex">\[
+\begin{equation}
+E(X)=\mu\space\text{和}\space V(X)=\sigma^2\qquad
+\end{equation}
+\]</div>
+<p>用符号<span class="arithmatex">\(N(\mu, \sigma^2)\)</span>表示正态分布。</p>
+</div>
+<p>依据概率密度函数可以计算任意范围内的概率。</p>
+<div class="admonition note">
+<p class="admonition-title">例4.1</p>
+<p>假定导线中的电流强度服从平均值为10mA方差为4<span class="arithmatex">\(\text{(mA)}^2\)</span>的正态分布，问测量值大于13mA的概率是多少？</p>
+<p>设<span class="arithmatex">\(X\)</span>表示电流强度。需要计算的概率是<span class="arithmatex">\(P(X&gt;13)\)</span>。这个概率是图4.4所示曲线下的阴影部分的面积。不幸的是还没有直接的公式能表达正态分布概率密度函数的积分，所以基于正态分布的概率只能通过数字计算或查表获得。</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">图4.4、参数为<span class="arithmatex">\(\mu=10\)</span>和<span class="arithmatex">\(\sigma^2=4\)</span>的正态分布随机变量在<span class="arithmatex">\(X&gt;13\)</span>是的概率</p>
+<p><img alt="fig4.4" src="images/fig4.4.png" /></p>
+</div>
+<p>利用正态分布的概率密度函数，可以得到某些重要结论。图4.5显示了对于任意正态随机变量，有：</p>
+<div class="arithmatex">\[
+\begin{align}
+P(\mu-\sigma&lt;X&lt;\mu+\sigma)&amp;=0.6827\nonumber\\
+P(\mu-2\sigma&lt;X&lt;\mu+2\sigma)&amp;=0.9545\nonumber\\
+P(\mu-3\sigma&lt;X&lt;\mu+3\sigma)&amp;=0.9973\nonumber\\
+\end{align}
+\]</div>
+<div class="admonition note">
+<p class="admonition-title">图4.5、与正态分布有关的概率</p>
+<p><img alt="fig4.5" src="images/fig4.5.png" /></p>
+</div>
+<p>从<span class="arithmatex">\(f(x)\)</span>的对称性可以得到<span class="arithmatex">\(P(X&gt;\mu)=P(X&lt;\mu)=0.5\)</span>的结论。因为对于所有<span class="arithmatex">\(x\)</span>都有<span class="arithmatex">\(f(x)\)</span>为正，所以正态分布模型会为每一个实数区间分配相应的概率。但是随着<span class="arithmatex">\(x\)</span>远离<span class="arithmatex">\(\mu\)</span>概率密度函数会减小，所以在远离<span class="arithmatex">\(\mu\)</span>的区间分配的概率会更小，并且在很远处的概率就会近似为零了。</p>
+<p>在远离中心<span class="arithmatex">\(\mu\)</span>3个<span class="arithmatex">\(\sigma\)</span>之后的概率非常小这个结论能帮助我们快速绘制简略的概率密度函数，因为在以<span class="arithmatex">\(\mu\)</span>两边各有<span class="arithmatex">\(3\sigma\)</span>宽的区间内集中了0.9973的概率，所以我们指<span class="arithmatex">\(6\sigma\)</span>为正态分布的宽度。更高级的积分方法可以证明在概率密度函数在<span class="arithmatex">\(-\infty&lt;x&lt;\infty\)</span>范围内的积分为1.</p>
+<div class="admonition note">
+<p class="admonition-title">标准正态随机变量</p>
+<p>正态随机变量其参数：</p>
+<div class="arithmatex">\[\mu=0\space\text{和}\space\sigma^2=1\]</div>
+<p>则这个正态随机变量就是<strong>标准正态随机变量</strong>。用<span class="arithmatex">\(Z\)</span>表示标准正态随机变量。它的累积分布函数为：</p>
+<div class="arithmatex">\[\Phi(z)=P(Z\leq z)\]</div>
+</div>
+<p><a href="https://www2.sjsu.edu/faculty/gerstman/StatPrimer/positive-z.pdf">标准正态分布累积分布表</a>为我们提供了标准正态分布的累积分布值。利用查表可以得到具体某一个值的累积分布。详细见图4.5。</p>
+<div class="admonition note">
+<p class="admonition-title">图4.6、查表求标准正态分布累积概率</p>
+<p><img alt="fig4.6" src="images/fig4.6.png" /></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">例4.2</p>
+<p>下面的计算都显示在图4.7中。在工程实践中，概率常常会圆整到一位或两位有效数字。</p>
+<div class="arithmatex">\[
+\begin{align}
+(1)&amp;\qquad P(Z&gt;1.26)=1-P(Z&lt;1.26)=1-0.89616=0.1038\nonumber\\
+(2)&amp;\qquad P(Z&lt;-0.86)=0.19480&amp;&amp;\nonumber\\
+(3)&amp;\qquad P(Z&gt;-1.37)=P(Z&lt;1.37)=0.91465\nonumber\\
+(4)&amp;\qquad P(-1.25&lt;Z&lt;0.37)=P(Z&lt;0.37)-P(Z&lt;-1.25)=0.84431-0.10565=0.53866\nonumber\\
+(5)&amp;\qquad \because P(Z\leq -4.6)&lt;P(Z&lt;3.99)=0.00003\space\therefore P(Z\leq -4.6)\approx 0\nonumber\\
+(6)&amp;\qquad \text{if}P(Z&gt;z)=0.05\space\because P(Z&gt;z)=1-P(Z\leq z)=0.95\space\therefore z=1.645\nonumber\\
+(7)&amp;\qquad\because P(-z&lt;Z&lt;z)=0.99\space\therefore P(Z&gt;z)=1-P(Z&lt;z)=0.005\space\therefore z=2.58\nonumber
+\end{align}
+\]</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">图4.7、标准分布的图形化显示</p>
+<p><img alt="fig4.7" src="images/fig4.7.png" /></p>
+</div>
+<p>我们已定义了正态随机变量，更定义了标准正态随机变量。并且利用标准正态随机变量的累积分布函数，可以计算各种情况下的标准正态分布的概率。那么，普通正态分布的概率又应该如何计算呢？如果针对正态分布的不同参数都要制定不同的累积分布函数表格，那么工作量之大是不可能完成的。幸运的是，所有正态分布的累积分布函数在代数上都与标准正态分布的累积分布函数相关，所以只要有标准正态分布的累积分布函数表，我们就可以计算任意正态分布函数的累积正态分布函数值。这也是我们仔细研究标准正态分布、依据累积分布函数计算概率的原因。只要事先针对任意正态分布的随机变量做简单的代数变换，让它满足正态分布的条件，则新的分布就是标准正态分布，这样就可以计算标准正态分布下的概率，这个过程我们称为随机正态分布的标准化。</p>
+<div class="admonition note">
+<p class="admonition-title">标准化正态分布随机变量</p>
+<p>如果<span class="arithmatex">\(X\)</span>是正态分布随机变量，其参数<span class="arithmatex">\(E(X)=\mu\)</span>、<span class="arithmatex">\(V(X)=\sigma^2\)</span>，则随机变量</p>
+<div class="arithmatex">\[
+\begin{equation}
+Z=\frac{X-\mu}{\sigma}
+\end{equation}
+\]</div>
+<p>就是标准正态随机变量，其参数为<span class="arithmatex">\(E(Z)=0\)</span>、<span class="arithmatex">\(V(Z)=1\)</span>。</p>
+</div>
+<p>我们用一个实例说明用标准化的方法计算任意正态分布的概率。</p>
+<div class="admonition note">
+<p class="admonition-title">例4.3</p>
+<p>假定导线中的电流强度测定值服从平均值为10mA、方差为4<span class="arithmatex">\(\text{(mA)}^2\)</span>的正态分布。试问测量值超过13mA的概率是什么？</p>
+<p>设<span class="arithmatex">\(X\)</span>表示导线中的电流强度，需要计算的概率为<span class="arithmatex">\(P(X&gt;13)\)</span>。设<span class="arithmatex">\(Z=(X-10)/2\)</span>。则<span class="arithmatex">\(X\)</span>的值与转换后的<span class="arithmatex">\(Z\)</span>值之间的关系见图4.8。因为<span class="arithmatex">\(x=13\)</span>，所以<span class="arithmatex">\(z=(13-10)/2=1.5\)</span>，所以<span class="arithmatex">\(X&gt;13\)</span>对应<span class="arithmatex">\(Z&gt;1.5\)</span>。因此我们有：    </p>
+<div class="arithmatex">\[
+P(X&gt;13)=P(Z&gt;1.5)=1-P(Z\leq 1.5)=1-0.93319=0.06681
+\]</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">图4.8、标准化正态随机变量</p>
+<p><img alt="fig4.8" src="images/fig4.8.png" /></p>
+</div>
+<p>由这个实例我们知道，能过标准化任意正态分布为标准正态分布，我们很容易计算任意正态分布的函数。</p>
+<div class="admonition note">
+<p class="admonition-title">标准化以计算概率</p>
+<p>假设<span class="arithmatex">\(X\)</span>是正态随机变量，其参数为<span class="arithmatex">\(\mu\)</span>和<span class="arithmatex">\(\sigma^2\)</span>。那么：</p>
+<div class="arithmatex">\[
+\begin{equation}
+P(X\leq x)=P(\frac{X-\mu}{\sigma}\leq\frac{x=\mu}{\sigma})=P(Z\leq z)\qquad
+\end{equation}
+\]</div>
+<p>其中<span class="arithmatex">\(Z\)</span>是<strong>标准正态分布随机变量</strong>，并且<span class="arithmatex">\(z=\frac{(x-\mu)}{\sigma}\)</span>是通过标准化<span class="arithmatex">\(X\)</span>所获得的<strong>Z值</strong>。通过使用标准正态分布的累积分布表利用<span class="arithmatex">\(z=(x-\mu)/\sigma\)</span>可以得到概率<span class="arithmatex">\(P(X\leq x)\)</span>。</p>
+</div>
+<h3 id="453">4.5.3、正态化近似二项式分布和泊松分布</h3>
+<p>由中心极限定理我们知道，当判决实验的重复次数很大时，随机变量可以近似为正态分布随机变量。所以当我们看到这个题目时，并不会奇怪可以用正态随机变量去近似二项式分布随机变量，只要它的判决实验次数<span class="arithmatex">\(n\)</span>足够大。下面我们要举例说明许多二项式分布的物理系统都可以近似为标准正态分布，只要它的判决实验次数<span class="arithmatex">\(n\)</span>足够地大。在这些情况下，由于判决实验次数很大，直接用二项式分布的分布函数计算概率是很困难的，但这里用标准正态分布近似却十分有效。图4.9提供了一个实例。每一个柱体下的面积都等于<span class="arithmatex">\(x\)</span>的变量。请注意，每一个柱体下面的面积都可以用正态密度函数下的面积来近似计算。</p>
+<div class="admonition note">
+<p class="admonition-title">4.9、二项式分布的正态化近似</p>
+<p><img alt="fig4.9" src="images/fig4.9.png" /></p>
+</div>
+<p>从图4.9可以看到，类似<span class="arithmatex">\(P(3\leq X\leq 7)\)</span>可以用正态分布的的概率<span class="arithmatex">\(P(2.5\leq N\leq 7.5)\)</span>来近似。这个观察结果给我们提供了近似二项式分布的方法。因为我们用的是连续正态分布去近似的离散二项式随机变量分布，所以称这种修正为<strong>连续修正</strong>。</p>
+<div class="admonition note">
+<p class="admonition-title">例4.4</p>
+<p>假定数字通讯通道中接收错误位的概率可以用二项式分布随机变量建模，并且假定每一位被错误接收的概率为<span class="arithmatex">\(1\times 10^{-5}\)</span>。如果已传输了1600万位，问出现150或更少的错误位的概率是什么？</p>
+<p>设<span class="arithmatex">\(X\)</span>表示接收错误位的数量。它是一个二项式分布的随机变量并且：</p>
+<div class="arithmatex">\[
+P(X\leq 150)=\sum_{x=0}^{150}\begin{pmatrix}16,000,000\\x\end{pmatrix}(10^{-5})^x(1-10^{-5})^{16,000,000-x}
+\]</div>
+<p>很清楚，这个概率非常难以计算。幸运的是，正态分布可以为这个计算提供很好的近似结果。</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">二项式分布的正态近似</p>
+<p>如果<span class="arithmatex">\(X\)</span>是二项式分布的随机变量，其参数为<span class="arithmatex">\(n\)</span>和<span class="arithmatex">\(p\)</span>，则：</p>
+<div class="arithmatex">\[
+\begin{equation}
+Z=\frac{X-np}{\sqrt{np(1-p)}}\qquad
+\end{equation}
+\]</div>
+<p>近似是标准正态分布随机变量。为了用正态分布近似二项式分布，我们需要把<strong>连续修改</strong>应用到下面的两个累积概率：</p>
+<div class="arithmatex">\[
+P(X\leq x)=P(X\leq x+0.5)\cong P\left(Z\leq\frac{x+0.5-np}{\sqrt{np(1-p)}}\right)
+\]</div>
+<p>和</p>
+<div class="arithmatex">\[
+P(x\leq X)=P(x-0.5\leq X)\cong P\left(\frac{x-0.5-np}{\sqrt{np(1-p)}}\leq Z\right)
+\]</div>
+<p>只要<span class="arithmatex">\(np&gt;5\)</span>和<span class="arithmatex">\(n(1-p)&gt;5\)</span>，近似结果会非常好。</p>
+</div>
+<p>我们还记得在<a href="third.html">第3章</a>介绍过二项式分布变量<span class="arithmatex">\(X\)</span>的平均值<span class="arithmatex">\(E(X)=np\)</span>、方差<span class="arithmatex">\(V(X)=np(1-p)\)</span>。所以再看本章公式(12)，它就是一个正态随机变量标准化的公式。因此，本质上我们就是在<span class="arithmatex">\(np&gt;5\)</span>和<span class="arithmatex">\(n(1-p)&gt;5\)</span>的前提下，将二项式分布视为正态分布。</p>
+<p>要记住这个近似性的一个好方法就是按<span class="arithmatex">\(\leq\)</span>和<span class="arithmatex">\(\geq\)</span>的项来写概率，然后再将它们加上或送去0.5的修正因子即可，这样可以保证正态化后的概率更大。</p>
+<p>现在我们来计算例4.4的概率：</p>
+<div class="arithmatex">\[
+\begin{align}
+P(X\leq 150)&amp;=P(X\leq 150.5)\nonumber\\
+&amp;=P\left(\frac{X-160}{\sqrt{160(1-10^{-5})}}\leq\frac{150.5-160}{\sqrt{160(1-10^{-5})}}\right)\nonumber\\
+&amp;\cong P(Z\leq -0.75)=0.227\nonumber
+\end{align}
+\]</div>
+<p>因为<span class="arithmatex">\(np=(16\times 10^{6})(1\times 10^{-5})=160\)</span>而且<span class="arithmatex">\(n(1-p)\)</span>更大，所以这种近似计算值非常好。</p>
+<p>二项式分布的概率是很难计算的，特别是判决实验重复次数<span class="arithmatex">\(n\)</span>很大时，但可以用正态化来很好地近似计算。</p>
+<p>修正因子可以很好地改善近似性。但是如果<span class="arithmatex">\(np\)</span>或<span class="arithmatex">\(n(1-p)\)</span>很小，那么二项式分布会图形会发生很大的偏移，用对称的正态分布就很难去近似计算。这两种情况可见图4.10。</p>
+<div class="admonition note">
+<p class="admonition-title">图4.10、如果<span class="arithmatex">\(p\)</span>接近0或1二项式分布不再有对称性</p>
+<p><img alt="fig4.10" src="images/fig4.10.png" /></p>
+</div>
+<p>我们还知道泊松分布是判决实验次数趋于无穷时的二项式分布，因此也可以用正态分布来近似计算泊松分布的概率。</p>
+<div class="admonition note">
+<p class="admonition-title">泊松分布的正态近似</p>
+<p>如果<span class="arithmatex">\(X\)</span>是参数为<span class="arithmatex">\(E(X)=\lambda\)</span>和<span class="arithmatex">\(V(X)=\lambda\)</span>的泊松分布，那么：</p>
+<div class="arithmatex">\[
+\begin{equation}
+Z=\frac{X-\lambda}{\sqrt{\lambda}}\qquad
+\end{equation}
+\]</div>
+<p>是近似标准正态分布随机变量。与二项式分布的正态化一样也需要同样地添加修正因子。如果</p>
+<div class="arithmatex">\[
+\lambda&gt;5
+\]</div>
+<p>那么近似会非常好。</p>
+</div>
+<h3 id="454">4.5.4、指数分布</h3>
+<p>我们在<a href="third.html">第3章</a>讨论过泊松分布，比如在固定细长导线上的缺陷数量就服从泊松分布。在细长导线上缺陷间的距离是另外一种随机变量，这个随机变量常常让人感兴趣。设随机变量<span class="arithmatex">\(X\)</span>表示在导线上从任意开始点检测到一个缺陷的长度。正如我们所希望的，<span class="arithmatex">\(X\)</span>分布可以从缺陷数量的分布知识获得灵感。这两个分布之间的关系的关键是下面的原理。当且仅当在3mm长的导线内没有缺陷则第一个缺陷出现的距离会超过3mm——这非常简单，但足以支持我们对<span class="arithmatex">\(X\)</span>变量的分析。</p>
+<p>一般来说，让随机变量<span class="arithmatex">\(N\)</span>表示在<span class="arithmatex">\(x\)</span>mm长导线上的缺陷数。如果平均缺陷数是<span class="arithmatex">\(\lambda\)</span>每mm，则<span class="arithmatex">\(N\)</span>是参数<span class="arithmatex">\(\lambda x\)</span>的泊检验分布。假定导线长于<span class="arithmatex">\(x\)</span>，则：</p>
+<div class="arithmatex">\[
+P(X&gt;x)=P(N=0)=\frac{e^{-\lambda x}(\lambda x)^0}{0!}=e^{-\lambda x}
+\]</div>
+<p>则</p>
+<div class="arithmatex">\[
+F(x)=P(X\leq x)=1-e^{-\lambda x}, \qquad x\leq 0
+\]</div>
+<p>是<span class="arithmatex">\(X\)</span>的累积分布函数。按定义，它的概率密度函数应该是：</p>
+<div class="arithmatex">\[
+f(x)=\lambda e^{-\lambda x},\qquad x\leq 0
+\]</div>
+<p><span class="arithmatex">\(X\)</span>的推导仅仅依赖于导线上缺陷的数量的分布是服从<strong>泊松过程</strong>。其实测量<span class="arithmatex">\(X\)</span>的起始点并不重要，因为在区间上泊松过程的缺陷数量的概率只取决于区间长度而与位置无关。对于任意的泊松过程，可以应用如下结论：</p>
+<div class="admonition note">
+<p class="admonition-title">指数分布</p>
+<p>随机变量<span class="arithmatex">\(X\)</span>等于泊松过程中前后相继事件的距离，且该泊松过程中每单位区间的事件平均值为<span class="arithmatex">\(\lambda&gt;0\)</span>，则<span class="arithmatex">\(X\)</span>是参数为<span class="arithmatex">\(\lambda\)</span>的**指数随机变量$。它的概率密度函数为：</p>
+<div class="arithmatex">\[
+\begin{equation}
+f(x)=\lambda e^{-\lambda x},\qquad\text{其中}\space 0\leq x &lt;\infty\qquad
+\end{equation}
+\]</div>
+</div>
+<p>根据平均值和方差的定义，可以计算指数分布的平均值和方差。</p>
+<div class="admonition note">
+<p class="admonition-title">指数分布的平均值和方差</p>
+<p>如果随机变量<span class="arithmatex">\(X\)</span>是指数分布随机变量，其参数为<span class="arithmatex">\(\lambda\)</span>，则：</p>
+<div class="arithmatex">\[
+\begin{equation}
+\mu=E(X)=\frac{1}{\lambda}\qquad\text{和}\qquad\sigma^2=V(X)=\frac{1}{\lambda^2}\qquad
+\end{equation}
+\]</div>
+</div>
+<p>在使用指数分布时，与其它泊松过程一样要注意<strong>计量单位协调</strong>的问题。下面我们用实例4.5来说明处理注意计量单位协调的问题。</p>
+<div class="admonition note">
+<p class="admonition-title">例4.5</p>
+<p>大公司的计算机网络上，用户登录到系统可以用泊松过程来建模。假定每小时平均登录25个用户。请问题6分钟内没有登录的概率是多少？</p>
+<p>用<span class="arithmatex">\(X\)</span>表示以小时计量的两个登录之间的时间。那么<span class="arithmatex">\(X\)</span>就是一个指数分布，其参数为<span class="arithmatex">\(\lambda=25\text{个登录每小时}\)</span>。我们希望计算的是<span class="arithmatex">\(X\)</span>超过6分钟的概率。因为<span class="arithmatex">\(\lambda\)</span>是以小时为计量单位的，所以我们全部用小时为单位表达所有的时间单位。那么6分钟就是0.1小时。图4.11中的阴影面积显示了我们要计算的概率。因此，我们有：</p>
+<div class="arithmatex">\[
+P(X&gt;0.1)=\int_{0.1}^{\infty}25e^{-25x}dx=e^{-25(0.1)}=0.082
+\]</div>
+<p>当然我们也可以利用累积分布函数来求概率：</p>
+<div class="arithmatex">\[
+P(X&gt;0.1)=1-F(0.1)=e^{-25(0.1)}
+\]</div>
+<p>答案完全是一样的。</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">图4.11、指数分布的概率</p>
+<p><img alt="fig4.11" src="images/fig4.11.png" /></p>
+</div>
+<p>要理解指数分布，就要理解泊松过程。泊松过程是泊松分布和指数分布之间的相同点。泊松过程无穷多次伯努利判决实验。而在泊松过程中，成功的事件数量是泊松分布，前后两个事件之间的区间长度就是指数分布。这是指数分布与泊松分布不同之处。它们的基础都是泊松过程。但关心的随机变量不同，则分布也不同。泊松过程是一个广泛应用的随机过程。值得我们去认真体会。它与正态分布相同的是事件尽可能多地重复，所以我们可以用正态分布来近似计算泊松分布概率。要应用好这些分布，必定要理解它们底层的随机过程。</p>
+<p>实例4.5中，无论从何时开始记时，在6分钟内不再有人登录的概率是0.082。泊松分布过程假定在整个所观察的间隔中事件是均匀分布的，也就是说事件不会是聚簇的。如果登录能用泊松过程建模，那么在中午第一次登录后到12：6分时的概率与下午3：00登录后到3：06分登录的概率是完全相同的。并且如果在2：22分登录后到2：28分再有人登录的概率也是0.082。</p>
+<p>观察系统的时间起始点并不重要。但是，如果在一天的高使用周期内，比如早上8：00之后，紧跟着会有一个低使用周期，泊松分布并不适用于这种模式的登录建模，并且由泊松过程推导出来的分布也不适用于计算概率。也许针对高使用周期和低使用周期分布用不同的泊松分布建模更为恰当，这样可以在高使用周期使用较大的<span class="arithmatex">\(\lambda\)</span>值、在低使用周期使用较小的<span class="arithmatex">\(\lambda\)</span>值。之后使用不同参数的指数分布来计算低使用周期和高使用周期的概率。</p>
+<p><strong>缺乏记忆的性质</strong>(lack of memory property)：需要研究指数分布随机变量的条件概率问题，它非常有趣。我们先用一个实例来分析问题的本质。</p>
+<div class="admonition note">
+<p class="admonition-title">实例4.5</p>
+<p>设<span class="arithmatex">\(X\)</span>是盖革(Geiger)计数器中检测到粒子之间的时间间隔。假定<span class="arithmatex">\(X\)</span>是指数分布，其参数<span class="arithmatex">\(\lambda=1.4\)</span>分钟。从开始计时起，在30秒内检测到一个粒子的概率为：</p>
+<div class="arithmatex">\[
+P(X&lt;0.5\text{分钟})=F(0.5)=1-e^{-0.5/1.4}=0.30
+\]</div>
+<p>在这个计算中，所有计量单位都转换为了“分钟“。现在假定我们打开盖革计算器并且等待3分钟没有检测到粒子，那么从时候开始在接下来的30秒内检测到粒子的概率是多大呢？</p>
+<p>因为我们已经等待了3分钟，所以我们感觉到“应该”能检测到粒子了。也就是说我们觉得在接下来的30秒内检测到粒子的概率应该大于0.3。但是，对于指数分布，情况并不是这样的。此时需要计算的概率是条件概率<span class="arithmatex">\(P(X&gt;3.5|X&gt;3)\)</span>。从条件概率的定义我们有：</p>
+<div class="arithmatex">\[
+P(X&lt;3.5|X&gt;3)=P(3&lt;X&lt;3.5)/P(X&gt;3)
+\]</div>
+<p>其中：</p>
+<div class="arithmatex">\[
+\begin{align}
+P(3&lt;X&lt;3.5)&amp;=F(3.5)-F(3)\nonumber\\
+&amp;=[1-e^{-3.5/1.4}]-[1-e^{-3/1.4}]=0.035\nonumber
+\end{align}
+\]</div>
+<p>以及：</p>
+<div class="arithmatex">\[
+P(X&gt;3)=1-F(3)=e^{-3/1.4}=0.117
+\]</div>
+<p>所以我们有：</p>
+<div class="arithmatex">\[
+P(X&lt;3.5|X&gt;3)=0.035/0.117=0.3
+\]</div>
+<p>在等待3分钟没有检测到粒子后，在接下来的30秒内检测到粒子的概率仍然是0.3，与打开计数器立即计数，在接下来的30秒内检测到粒子的概率仍然是相同的。事实上就是这样，在等待3分钟且没有检测到粒子的事件并不能改变在接下来的30秒内检测到粒子的概率。</p>
+<p>这个例子向我们展示了指数分布随机变量的<strong>缺乏记忆的性质</strong>，更普通的情况下这个性质也是存在的。事实上，指数分布是唯一有这一性质的连续随机变量。</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">缺乏记忆的性质</p>
+<p>指数分布随机变量<span class="arithmatex">\(X\)</span>存在：</p>
+<div class="arithmatex">\[
+\begin{equation}
+P(X&lt;t_1+t_2|X&gt;t_1)=P(X&lt;t_1)\qquad
+\end{equation}
+\]</div>
+</div>
+<p>图4.12用图形显示了缺乏记忆性质。区域<span class="arithmatex">\(A\)</span>下的面积除以<span class="arithmatex">\((A+B+C+D=1)\)</span>的面积行于<span class="arithmatex">\(P(X&lt;t_2)\)</span>。区域<span class="arithmatex">\(C\)</span>的面积除以<span class="arithmatex">\((C+D)\)</span>的面积等于<span class="arithmatex">\(P(X&lt;t_1+t_2|X&gt;t_1)\)</span>。缺乏记忆的性质意味着<span class="arithmatex">\(A\)</span>与总面积的比例等于<span class="arithmatex">\(C\)</span>在<span class="arithmatex">\(C+D\)</span>中的比例。</p>
+<div class="admonition note">
+<p class="admonition-title">图4.12、指数分布缺乏记忆的性质</p>
+<p><img alt="fig4.12" src="images/fig4.12.png" /></p>
+</div>
+<p>我们再回忆一下泊松过程的开发过程。在泊松过程中，假定一个区间可以分割为相互独立的子区间。这些子区间就类似于独立的伯努利判决实验，它们组成了二项式分布。由于每一个判决实验都是独立的，因此前一个事件的知识并不能影响后一个子区间中事件的概率。指数随机变量是对离散几何随机变量的连续模仿，它们当然会共享类似的缺乏记忆性质。</p>
+<p>指数分布常常可以用于可靠性研究，为从开始使用到设备失效的时间建模。比如，半导体芯片就可以建模为指数随机变量，其平均使用时间为40,000小时。缺乏记忆性质暗示假设设备不会磨损。也就是说，无论设备已使用了多长时间，在接下来1,000个小时内失效的概率，与设备刚开始使用时在接下来1,000个小时内失效的概率是相同的。受随机冲击造成设备失效的寿命<span class="arithmatex">\(L\)</span>也许更适合于用指数随机变量建模。但是如果设备机械磨损较低，比如轴承的磨损，它的寿命<span class="arithmatex">\(L\)</span>更适合于用诸如概率<span class="arithmatex">\(P(L&lt;t+\Delta t|L&gt;t)\)</span>会随着<span class="arithmatex">\(t\)</span>的增加而增加的分布来建模。类似于威尔布(Weibull)分布常常可以用于建模这类型设备的失效时间。威尔布分布在材料的失效和寿命研究方面都有用武之地。下一节我们要介绍威尔布分布。</p>
+<h3 id="455">4.5.5、威尔布分布</h3>
+<p>在4.5.4节我们提到了威尔布分布常常用于许多物理系统中建模失效时间。分布的参数为我们提供了极大的模拟系统的灵活性，这些系统的失效次数会随着时间增加而增加(如轴承的磨损)，随着时间的增加而减少(如某些半导体)，或随着时间的增加保持不变(由于外部冲击造成的失效)。</p>
+<div class="admonition note">
+<p class="admonition-title">威尔布分布</p>
+<p>如果随机变量<span class="arithmatex">\(X\)</span>的概率密度函数为：</p>
+<div class="arithmatex">\[
+\begin{equation}
+f(x)=\frac{\beta}{\delta}\left(\frac{x}{\delta}\right)^{\beta-1}\text{exp}\left[-\left(\frac{x}{\delta}\right)^{\beta}\right],\qquad \text{for}\space x&gt;0\qquad
+\end{equation}
+\]</div>
+<p>则随机变量<span class="arithmatex">\(X\)</span>称为<strong>威尔布随机变量</strong>(Weibull random variable)，且其大小参数为<span class="arithmatex">\(\delta&gt;0\)</span>和形状参数为<span class="arithmatex">\(\beta&gt;0\)</span>。</p>
+</div>
+<p>这里的大小参数和形状参数指的是曲线的分布范围和形状。图4.13显示了两个参数对概率密度曲线的影响。可以看到，当<span class="arithmatex">\(\beta=1\)</span>时，威尔布分布变成了指数分布。另外，当形状参数<span class="arithmatex">\(\beta=2\)</span>时它又变成了<strong>罗利分布</strong>(Raleigh distribution)。</p>
+<div class="admonition note">
+<p class="admonition-title">图4.13、不同参数的威尔布分布概率密度函数</p>
+<p><img alt="fig4.13" src="images/fig4.13.png" /></p>
+</div>
+<p>我们常常使用累积分布函数计算概率。累积分布函数如下：</p>
+<div class="admonition note">
+<p class="admonition-title">威尔布分布的累积分布函数</p>
+<p>如果<span class="arithmatex">\(X\)</span>是威尔布分布，其参数为<span class="arithmatex">\(\delta\)</span>和<span class="arithmatex">\(\beta\)</span>，则它的累积分布函数为：</p>
+<div class="arithmatex">\[
+\begin{equation}
+F(X)=1-\text{e}^{-\left(\frac{x}{\delta}\right)^{\beta}}\qquad
+\end{equation}
+\]</div>
+</div>
+<p>同样地我们也能得到威尔布随机变量的平均值和方差：</p>
+<div class="admonition note">
+<p class="admonition-title">威尔布随机变量的平均值和方差</p>
+<p>如果<span class="arithmatex">\(X\)</span>是参数为<span class="arithmatex">\(\delta\)</span>和<span class="arithmatex">\(\beta\)</span>的威尔布分布，它的平均值和方差为：</p>
+<div class="arithmatex">\[
+\begin{equation}
+\mu=E(X)=\delta\Gamma\left(1+\frac{1}{\beta}\right)\qquad\text{和}\qquad \sigma^2=V(X)=\delta^2\Gamma\left(1+\frac{2}{\beta}\right)-\delta^2\left[\Gamma\left(1+\frac{1}{\beta}\right)\right]^2\qquad
+\end{equation}
+\]</div>
+<p>其中<span class="arithmatex">\(\Gamma(r)\)</span>为<span class="arithmatex">\(\gamma\)</span>函数，它等于：</p>
+<div class="arithmatex">\[
+\begin{equation}
+\Gamma(r)=\int_{0}^{\infty}x^{r-1}e^{-x}dx, \qquad\text{for}\space\space r&gt;0\qquad
+\end{equation}
+\]</div>
+</div>
+<p>威尔布分布中要使用<span class="arithmatex">\(\gamma\)</span>函数，它有如下性质：</p>
+<div class="arithmatex">\[
+\begin{align}
+\Gamma(r)&amp;=(r-1)\Gamma(r-1)\nonumber\\
+\Gamma(r)&amp;=(r-1)!\nonumber\\
+\Gamma(0)&amp;=1\nonumber
+\end{align}
+\]</div>
+<div class="admonition note">
+<p class="admonition-title">重要概念</p>
+<ul>
+<li>
+<p>连续随机变量(Contiunous random variable)</p>
+</li>
+<li>
+<p>连续随机变量概率分布(Probability distribution of continuous random variable)</p>
+</li>
+<li>
+<p>连续随机变量概率密度函数(Probability density function of continuous random variable)</p>
+</li>
+<li>
+<p>连续随机变量累积概率分布函数(Cumulative probability distribution of function of continuous random variable)</p>
+</li>
+<li>
+<p>连续随机变量平均值(Mean of continuous random variable)</p>
+</li>
+<li>
+<p>连续随机变量平均值函数(Mean-function of a continuous random variable)</p>
+</li>
+<li>
+<p>连续随机变量方差(Variance of continuous random variable)</p>
+</li>
+<li>
+<p>连续均匀分布(Continuous uniform distribution)</p>
+</li>
+<li>
+<p>正态分布(Normal distribution)</p>
+</li>
+<li>
+<p>正态近似二项式分布和泊松分布(Normal approximation to binomial and Poisson distribution)</p>
+</li>
+<li>
+<p>连续修正(continuous correction)</p>
+</li>
+<li>
+<p>指数分布(Exponential distribution)</p>
+</li>
+<li>
+<p>缺乏记忆(lack of memory)</p>
+</li>
+<li>
+<p>威尔布分布(Weibull distribution) </p>
+</li>
+</ul>
+</div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="third.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: 第三章 离散随机变量及其概率分布" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              第三章 离散随机变量及其概率分布
+            </div>
+          </div>
+        </a>
+      
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": ".", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "assets/javascripts/workers/search.709b4209.min.js", "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.2b46852b.min.js"></script>
+      
+        <script src="javascripts/mathjax_config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
