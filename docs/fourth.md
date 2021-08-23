@@ -584,3 +584,33 @@ $$
 \Gamma(0)&=1\nonumber
 \end{align}
 $$
+
+!!!note "重要概念"
+
+    - 连续随机变量(Contiunous random variable)
+
+    - 连续随机变量概率分布(Probability distribution of continuous random variable)
+    
+    - 连续随机变量概率密度函数(Probability density function of continuous random variable)
+
+    - 连续随机变量累积概率分布函数(Cumulative probability distribution of function of continuous random variable)
+
+    - 连续随机变量平均值(Mean of continuous random variable)
+
+    - 连续随机变量平均值函数(Mean-function of a continuous random variable)
+
+    - 连续随机变量方差(Variance of continuous random variable)
+
+    - 连续均匀分布(Continuous uniform distribution)
+
+    - 正态分布(Normal distribution)
+
+    - 正态近似二项式分布和泊松分布(Normal approximation to binomial and Poisson distribution)
+
+    - 连续修正(continuous correction)
+
+    - 指数分布(Exponential distribution)
+
+    - 缺乏记忆(lack of memory)
+
+    - 威尔布分布(Weibull distribution) 
