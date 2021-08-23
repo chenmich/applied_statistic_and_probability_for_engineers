@@ -526,3 +526,91 @@ $X$的推导仅仅依赖于导线上缺陷的数量的分布是服从**泊松过
 指数分布常常可以用于可靠性研究，为从开始使用到设备失效的时间建模。比如，半导体芯片就可以建模为指数随机变量，其平均使用时间为40,000小时。缺乏记忆性质暗示假设设备不会磨损。也就是说，无论设备已使用了多长时间，在接下来1,000个小时内失效的概率，与设备刚开始使用时在接下来1,000个小时内失效的概率是相同的。受随机冲击造成设备失效的寿命$L$也许更适合于用指数随机变量建模。但是如果设备机械磨损较低，比如轴承的磨损，它的寿命$L$更适合于用诸如概率$P(L<t+\Delta t|L>t)$会随着$t$的增加而增加的分布来建模。类似于威尔布(Weibull)分布常常可以用于建模这类型设备的失效时间。威尔布分布在材料的失效和寿命研究方面都有用武之地。下一节我们要介绍威尔布分布。
 
 ### 4.5.5、威尔布分布
+
+在4.5.4节我们提到了威尔布分布常常用于许多物理系统中建模失效时间。分布的参数为我们提供了极大的模拟系统的灵活性，这些系统的失效次数会随着时间增加而增加(如轴承的磨损)，随着时间的增加而减少(如某些半导体)，或随着时间的增加保持不变(由于外部冲击造成的失效)。
+
+!!!note "威尔布分布"
+    如果随机变量$X$的概率密度函数为：
+
+    $$
+    \begin{equation}
+    f(x)=\frac{\beta}{\delta}\left(\frac{x}{\delta}\right)^{\beta-1}\text{exp}\left[-\left(\frac{x}{\delta}\right)^{\beta}\right],\qquad \text{for}\space x>0\qquad
+    \end{equation}
+    $$
+
+    则随机变量$X$称为**威尔布随机变量**(Weibull random variable)，且其大小参数为$\delta>0$和形状参数为$\beta>0$。
+
+这里的大小参数和形状参数指的是曲线的分布范围和形状。图4.13显示了两个参数对概率密度曲线的影响。可以看到，当$\beta=1$时，威尔布分布变成了指数分布。另外，当形状参数$\beta=2$时它又变成了**罗利分布**(Raleigh distribution)。
+
+!!!note "图4.13、不同参数的威尔布分布概率密度函数"
+    ![fig4.13](images/fig4.13.png)
+
+我们常常使用累积分布函数计算概率。累积分布函数如下：
+
+!!!note "威尔布分布的累积分布函数"
+    如果$X$是威尔布分布，其参数为$\delta$和$\beta$，则它的累积分布函数为：
+
+    $$
+    \begin{equation}
+    F(X)=1-\text{e}^{-\left(\frac{x}{\delta}\right)^{\beta}}\qquad
+    \end{equation}
+    $$
+
+同样地我们也能得到威尔布随机变量的平均值和方差：
+
+!!!note "威尔布随机变量的平均值和方差"
+    如果$X$是参数为$\delta$和$\beta$的威尔布分布，它的平均值和方差为：
+
+    $$
+    \begin{equation}
+    \mu=E(X)=\delta\Gamma\left(1+\frac{1}{\beta}\right)\qquad\text{和}\qquad \sigma^2=V(X)=\delta^2\Gamma\left(1+\frac{2}{\beta}\right)-\delta^2\left[\Gamma\left(1+\frac{1}{\beta}\right)\right]^2\qquad
+    \end{equation}
+    $$
+
+    其中$\Gamma(r)$为$\gamma$函数，它等于：
+
+    $$
+    \begin{equation}
+    \Gamma(r)=\int_{0}^{\infty}x^{r-1}e^{-x}dx, \qquad\text{for}\space\space r>0\qquad
+    \end{equation}
+    $$
+
+威尔布分布中要使用$\gamma$函数，它有如下性质：
+
+$$
+\begin{align}
+\Gamma(r)&=(r-1)\Gamma(r-1)\nonumber\\
+\Gamma(r)&=(r-1)!\nonumber\\
+\Gamma(0)&=1\nonumber
+\end{align}
+$$
+
+!!!note "重要概念"
+
+    - 连续随机变量(Contiunous random variable)
+
+    - 连续随机变量概率分布(Probability distribution of continuous random variable)
+    
+    - 连续随机变量概率密度函数(Probability density function of continuous random variable)
+
+    - 连续随机变量累积概率分布函数(Cumulative probability distribution of function of continuous random variable)
+
+    - 连续随机变量平均值(Mean of continuous random variable)
+
+    - 连续随机变量平均值函数(Mean-function of a continuous random variable)
+
+    - 连续随机变量方差(Variance of continuous random variable)
+
+    - 连续均匀分布(Continuous uniform distribution)
+
+    - 正态分布(Normal distribution)
+
+    - 正态近似二项式分布和泊松分布(Normal approximation to binomial and Poisson distribution)
+
+    - 连续修正(continuous correction)
+
+    - 指数分布(Exponential distribution)
+
+    - 缺乏记忆(lack of memory)
+
+    - 威尔布分布(Weibull distribution) 
