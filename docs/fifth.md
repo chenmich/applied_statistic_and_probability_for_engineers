@@ -189,3 +189,67 @@ $$
 如果已开发出了我们的研究系统的概率模型，那么可以从随机变量分布的性质就可以确定是否彼此独立。如果我们对所研究系统有充分的研究和认识，也可以假定随机变量是独立的。在假定独立的基础上，从边缘概率分布可以计算出两个随机变量的概率。比如在某一计算机控制系统中，计算机制搜索时间与成人的高度这两个随机变量就是彼此独立的。
 
 ### 5.1.5、多于两个随机变量
+
+在一个随机实验过程中，可以定义两个随机变量，当然也能定义多个随机变量。多个随机变量也会有联合概率分布。
+
+假定有随机变量$X_1,X_2,X_3,\cdots,X_p$，只要有计算在$p$维空间中的某一区域$R$的$X_1,X_2,X_3,\cdots,X_p$概率的方法，则可以确定$X_1,X_2,X_3,\cdots,X_p$的概率分布。设$f_{X_1,X_2,X_3,\cdots,X_p}(x_1,x_2,x_3,\cdots,x_P)$为$X_1,X_2,X_3,\cdots,X_p$的联合概率密度函数，则可以用在区域$R$上对$f_{X_1,X_2,X_3,\cdots,X_p}(x_1,x_2,x_3,\cdots,x_P)$的多重积分计算$X_1,X_2,X_3,\cdots,X_p$在区域$R$上的概率。
+
+!!!note "联合概率密度函数"
+    对于连续随机变量$X_1,X_2,X_3,\cdots,X_p$，我们用$f_{X_1,X_2,X_3,\cdots,X_p}$表示它的**联合概率密度函数**，则此函数应该满足以下条件：
+
+    $$
+    \begin{align}
+    &(1)\qquad f_{X_1,X_2,X_3,\cdots,X_p}(x_1,x_2,\cdots,x_p)\geq 0\nonumber\\
+    &(2)\qquad \int\limits_{-\infty}^{\infty}\int\limits_{-\infty}^{\infty}\cdots\int\limits_{-\infty}^{\infty}f_{X_1X_2\cdots X_p}(x_1, x_2,\cdots x_p)dx_1dx_2\cdots dx_p=1\nonumber\\
+    &(3)\qquad\text{对于p维空间的任意区域R，}\nonumber\\
+    &P[(X_1,X_2,\cdots,X_p)\in B]=\int\int\limits_{B}\int f_{X_1,X_2,\cdots,X_P}(x_1,x_2,\cdots,x_p)dx_1dx_2\cdots dx_p\qquad
+    \end{align}
+    $$
+
+多个随机变量的边缘分布也是我们要关心的概率分布，它的定义可以从两个随机变量的边缘分布推广而得，对于连续性随机变量组，如果知道它们的联合概率密度函数，那么可以计算连续随机变量组的边缘分布：
+
+!!!note "边缘概率密度函数"
+    如果连续随机变量$X_1,X_2,\cdots,X_p$的概率密度函数为$f_{X_1X_2X_p}(x_1,x_2,\cdots,x_p)$，则$X$的**边缘概率密度函数**为：
+
+    $$
+    \begin{equation}
+    f_{X_i}(x_i)=\int\int\cdots\int f_{X_1X_2\cdots X_p}(x_1,x_2,\cdots,x_p)dx_1dx_2\cdots dx_{i-1}dx_{i+1}\cdots dx_p \qquad
+    \end{equation}
+    $$
+
+    其中积分区间是在$X_i=x_i$条件下所有$X_1,X_2,\cdots,X_p$的所有点组成的区域。
+
+同样，我们可以有多个连续随机变量联合概率分布的平均值和方差的计算方法：
+
+!!!note "联合分布的平均值和方差"
+    
+    $$
+    \begin{align}
+    &\qquad E(X_i)=\int\limits_{-\infty}^{\infty}\int\limits_{-\infty}^{\infty}\cdots\int\limits_{-\infty}^{\infty}x_if_{X_1X_2\cdots X_p}(x_1,x_2,\cdots,x_p)dx_1dx_2\cdots dx_p\nonumber\\
+    &\text{和}\\
+    &\qquad V(X_i)=\int\limits_{-\infty}^{\infty}\int\limits_{-\infty}^{\infty}\cdots\int\limits_{-\infty}^{\infty}(x_i-\mu _{X_i})^2f_{X_1X_2\cdots X_p}(x_1,x_2,\cdots,x_p)dx_1dx_2\cdots dx_p\nonumber
+    \end{align}
+    $$
+
+一组随机变量之间也有独立性存在，其定义为：
+
+!!!note "独立性"
+    设有一组随机变量$X_1, X_2, \cdots,X_p$，对于所有的$x_1,x_2,\cdots,x_p$，当且仅当下式存立：
+
+    $$
+    \begin{equation}
+    f_{X_1X_2\cdots X_p}(x_1, x_2, \cdots, x_p)=f_{X_1}(x_1)f_{X_2}(X_2)\cdots f_{X_p}(x_p)
+    \end{equation}
+    $$
+
+    则这组随机变量之间是相互独立的。
+
+有必要注意的是，公式(11)是一组随机变量之间相互独立的充分必要条件。
+
+针对相互独立的一组随机变量$X_1, x_2,\cdots,X_p$和任意的区域$A_1, A_2, \cdots, A_p$可以推导得到:
+
+$$
+P(X_1\in A_1, X_2\in A_2,\cdots, X_p\in A_p)=P(X_1\in A_1)P(X_2\in A_2)\cdots P(X_p\in A_p)
+$$
+
+## 5.2、协方差和相关性
