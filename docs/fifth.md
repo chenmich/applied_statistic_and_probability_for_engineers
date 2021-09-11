@@ -526,3 +526,52 @@ $$
 
 ## 5.5、随机变量的一般函数
 
+在许多统计技术应用的领域，都需要推导一个或多个随机变量函数的概率分布。在本节，我们向读者介绍几个有用的结果，为解决这一问题，这些结果对我们有非常大的帮助。
+
+假定$X$是离散随机变量，其概率质量函数为$f){X}(x)$。设$Y=h(X)$定义了随机变量$X$和$Y$之间的一对一变换，它是一个函数。我们希望能找到$Y$的概率分布。一对一变换指的是每一个$x$值都只与一个且仅有一个$y=h(x)$的值对应，并且每一个$y$值都只与一个且仅有一个$x$值对应，即$x=u(y)$，$u(y)$可以通过求解$y=h(x)$获得。
+
+现在当随机变量$X$取值$u(y)$时随机变量$Y$取值为$y$。因此$Y$的概率分布就是：
+
+$$
+f_{Y}(y)=P(Y=y)=P(X=u(y))=f_{X}[u(Y)]
+$$
+
+由此我们可以得到如下结果：
+
+!!!note "离散随机变量的通用函数"
+    假定$X$是**离散**随机变量，其概率分布为$f_{X}(x)$。设$Y=h(X)$定义了随机变量$X$和$Y$之间的一对一变换，因此从公式$y=h(x)$可以求解唯一的$x$。现在假设这个解为$x=u(y)$。那么离散随机变量$Y$的概率质量函数为：
+
+    $$
+    \begin{equation}
+    f_{Y}(y)=f_{X}[u(y)]\qquad
+    \end{equation}
+    $$
+
+!!!note "连续随机变量的一般函数"
+    假定$X$将**连续**随机变量，其概率分布为$f_{X}(x)$。函数$Y=h(X)$是随机变量$X$和$Y$之间的一对一变换，因此由公式$y=h(x)$可以唯一地求解出用$y$表示的$x$，假定它为$x=u(y)$。则$Y$的概率分布为：
+
+    $$
+    \begin{equation}
+    f_{Y}(y)=f_{X}[u(y)]|J|\qquad
+    \end{equation}
+    $$
+
+    其中，$J＝u'(y)$是**Jacobian**变换，在此要使用它的绝对值。
+
+!!!note "重要概念"
+    1. 联合概率密度函数(Joint probability density function)
+    2. 联合概率质量函数(Joint probability mass function)
+    3. 边缘概率分布(Marginal probabiltiy distribution)
+    4. 条件概率密度函数(Conditional probability density function)
+    5. 条件概率质量函数(Conditional probability mass function)
+    6. 独立性(Independence)
+    7. 条件平均值(Conditional mean)
+    8. 条件方差(Conditional variance)
+    9. 协方差（Covariance)
+    10. 相关系数(Correlation)
+    11. 多项式分布(Multinomaial distribution)
+    12. 二元分布(Bivariate distribution)
+    13. 二元正态分布(Bivariate normal distribution)
+    14. 误差传播(Error propagation)
+    15. 正态分布的再生性质(Reproductive property of the normal distribution)
+    16. 随机变量的一般函数(General function of random variables) 
